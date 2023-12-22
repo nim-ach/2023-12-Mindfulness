@@ -1,224 +1,224 @@
-Record ID
-Event Name
-Repeat Instrument
-Repeat Instance
-Survey Identifier
-Survey Timestamp
-Código personal
-Nombre
-Apellido
-Sexo
-Rut
-Teléfono
-Correo electrónico
-Edad
-Complete?
-Survey Timestamp
-Fecha revisión 
-¿Presenta alguna enfermedad física o metabólica?
-¿Presenta alguna enfermedad psicológica?
-Medicamentos
-Cirugías recientes
-Complete?
-Survey Timestamp
-PAS inicio mmHg
-PAD inicio mmHg
-PAM inicio
-PP media mmHg
-Frecuencia cardíaca basal
-Frecuencia cardíaca máxima
-Complete?
-Survey Timestamp
-¿En el fondo está satisfecho con su vida?
-¿Ha abandonado muchas de sus actividades y pasatiempos?
-¿Siente que su vida está vacía? 
-¿Se aburre con frecuencia?
-¿Tiene esperanza en el futuro?
-¿Le preocupan ideas que no pueda quitar de su cabeza?
-¿Se encuentra de buen ánimo la mayor parte del tiempo? 
-¿Teme que algo malo pueda sucederle?
-¿Se siente feliz la mayor parte del tiempo?
-¿Se siente desamparado con frecuencia?
-¿Con frecuencia se siente desvelado y nervioso?
-¿Prefiere quedarse en casa a salir y realizar cosas nuevas?
-¿Se preocupa con frecuencia por el futuro? 
-¿Piensa que tiene más problemas de memoria que las demás personas?
-¿Piensa que es bueno estar vivo hoy?
-¿Se siente triste y desanimado con frecuencia? 
-¿Se siente inútil en su estado actual?
-¿Se preocupa mucho por el pasado?
-¿Le parece que la vida es algo apasionante?
-¿Le cuesta mucho emprender nuevos proyectos?
-¿Se siente con energías? 
-¿Piensa que su situación no tiene arreglo? 
-¿Piensa que la mayor parte de la gente está mejor que usted? 
-¿Se disgusta con frecuencia por cosas sin importancia?
-¿Siente ganas de llorar frecuentemente?
-¿Tiene dificultad para concentrarse?
-¿Disfruta al levantarse de mañana? 
-¿Prefiere evitar las reuniones sociales?
-¿Le resulta fácil tomar decisiones
-¿Siente su mente tan despejada como antes?
-Puntaje Total     10 o más ptos: no aplica CIES. (seguir con mindfulness).  
-Complete?
-Survey Timestamp
-Patrón Verano
-Patrón Invierno
-Patrón estacional
-SSI    No aplica: 1-3 ptos.  Puntaje típico o promedio: 4-7 ptos.  Winter Blues: 8-10 ptos.  SAD: 11 o más.
-Severidad
-Horas de sueño en invierno
-Horas de sueño en primavera
-Horas de sueño en verano
-Horas de sueño en otoño
-Complete?
-Survey Timestamp
-Hormigueo o entumecimiento
-Sensación de calor
-Temblor de piernas
-Incapacidad de relajarse
-Miedo a que suceda lo peor
-Mareo o aturdimiento
-Palpitaciones o taquicardia
-Sensaciones de inestabilidad e inseguridad física
-Terrores
-Nerviosismo
-Sensación de ahogo
-Temblores de manos
-Temblores generalizados o estremecimiento
-Miedo a perder el control
-Dificultad para respirar 
-Miedo a morirse
-Sobresaltos
-Molestias digestivas o abdominales
-Palidez
-Rubor facial
-Sudoración (no debida al calor)
-Puntaje
-Interpretación
-Complete?
-Survey Timestamp
-Visuoespacial/ejecutiva 
-Identificación
-Atención
-Lenguaje
-Abstracción 
-Recuerdo diferido
-Orientación
-Puntaje total MOCA
-Complete?
-Survey Timestamp
-1. Baño (esponja, ducha, o bañera)
-2. Vestido
-3. Uso del váter 
-4. Movilidad
-5. Continencia esfinteriana 
-6. Alimentación
-Interpretación Katz
-Complete?
-Survey Timestamp
-1. ¿Te abruman fácilmente los estímulos sensoriales fuertes?
-2. ¿Pareces estar al tanto de las sutilezas que te rodean?
-3. ¿Te afectan los estados de ánimo de otras personas?
-4. ¿Tiendes a ser más sensible al dolor?
-5. ¿Necesitas escaparte y tener algo de privacidad durante los días ocupados y de trabajo duro en una habitación oscura o en cualquier lugar donde puedas tener algo de privacidad y alivio de tanta estimulación?
-6. ¿Eres particularmente sensible a los efectos de la cafeína?
-7. ¿Te sientes fácilmente abrumado por cosas como luces brillantes, olores fuertes, tela gruesa o áspera, o sirenas cercanas?
-8. ¿Tienes una vida interior rica y compleja?
-9. ¿Te molestan los ruidos fuertes?
-10. ¿Te conmueven profundamente las artes escénicas o la música?
-11. ¿Tu sistema nervioso a veces te hace sentir tan agotado que solo quieres alejarte de todo?
-12. ¿Eres una persona concienzuda?
-13. ¿Te asustas fácilmente?
-14. ¿Te afecta mucho tener que hacer gran cantidad de cosas en poco tiempo?
-15. Cuando las personas se sienten incómodas en un entorno físico, ¿tiendes a saber qué se debe hacer para que se sientan más cómodas (como cambiar la iluminación o los asientos)?
-16. ¿Te molesta cuando la gente te obliga a hacer demasiadas cosas a la vez?
-17. ¿Te esfuerzas por evitar cometer errores u olvidar cosas?
-Puntaje
-Complete?
-Survey Timestamp
-Peso
-Talla
-IMC
-Clasificación del estado nutricional según IMC        Normal: 18,5 - 24,9   Sobrepeso: 25,0 - 29,9  Obeso: >30,0
-Complete?
-Survey Timestamp
-Porcentaje de grasa total
-Porcentaje de grasa brazo izquierdo
-Porcentaje de grasa brazo derecho
-Porcentaje de grasa pierna derecha
-Porcentaje de grasa pierna izquierda
-Porcentaje de grasa del torso
-Masa muscular total
-Masa muscular brazo izquierdo
-Masa muscular brazo derecho
-Masa muscular pierna derecha
-Masa muscular pierna izquierda
-Masa muscular del torso
-Peso corporal
-Porcentaje de agua corporal
-Porcentaje de masa ósea
-Porcentaje de grasa visceral
-Metabolismo basal
-Edad calculada
-Complete?
-Survey Timestamp
-Número de pasos
-Categorización 
-OBSERVACIONES
-Complete?
-Survey Timestamp
-FC Max Estimada 
-Mean RR- PRE
-RMSSD-PRE
-SD1- PRE
-PNS Índex- PRE
-Mean HR- PRE
-Stress Índex-PRE
-SD2-PRE
-SNS Índex- PRE
-SDNN-PRE
-VLF-PRE
-LF-PRE
-HF-PRE
-Borg-PRE
-Mean RR- PERI
-RMSSD-PERI
-SD1- PERI
-PNS Índex- PERI
-Mean HR- PERI
-Stress Índex-PERI
-SD2-PERI
-SNS Índex- PERI
-SDNN-PERI
-VLF-PERI
-LF-PERI
-HF-PERI
-Borg-POST
-Mean RR- POST
-RMSSD-POST
-SD1- POST
-PNS Índex- POST
-Mean HR- POST
-Stress Índex-POST
-SD2-POST
-SNS Índex- POST
-SDNN-POST
-VLF-POST
-LF-POST
-HF-POST
-Complete?
-Survey Timestamp
-Un pie al lado del otro
-Posición semi-tándem
-Posición tándem
-Test de velocidad de marcha 3 m    Mide el tiempo invertido para caminar 3 metros a paso normal  (utilizar el mejor tiempo de dos intentos)
-Test de levantarse de la silla (5 repeticiones)     'Medir tiempo invertido en levantarse 5 veces de la silla con la espalda recta lo más rápido posible con los brazos cruzados'
-Puntaje SPPB
-Categorización    Considerar:   10-12 ptos SPPB: limitación mínima o leve.   7-9 ptos SPPB: limitación leve.   4-6 ptos SPPB: limitación moderada.   0-3 ptos SPPB: limitación grave. 
-Complete?
-Survey Timestamp
-Concentración 
-Average % recovery 
-Range (%) 
-Complete?
+record_id
+event_name
+repeat_instrument
+repeat_instance
+survey_identifier
+survey_timestamp
+código_personal
+nombre
+apellido
+sexo
+rut
+teléfono
+correo_electrónico
+edad
+complete
+survey_timestamp
+fecha_revisión
+presenta_alguna_enfermedad_física_o_metabólica
+presenta_alguna_enfermedad_psicológica
+medicamentos
+cirugías_recientes
+complete
+survey_timestamp
+pas_inicio_mmhg
+pad_inicio_mmhg
+pam_inicio
+pp_media_mmhg
+frecuencia_cardíaca_basal
+frecuencia_cardíaca_máxima
+complete
+survey_timestamp
+en_el_fondo_está_satisfecho_con_su_vida
+ha_abandonado_muchas_de_sus_actividades_y_pasatiempos
+siente_que_su_vida_está_vacía
+se_aburre_con_frecuencia
+tiene_esperanza_en_el_futuro
+le_preocupan_ideas_que_no_pueda_quitar_de_su_cabeza
+se_encuentra_de_buen_ánimo_la_mayor_parte_del_tiempo
+teme_que_algo_malo_pueda_sucederle
+se_siente_feliz_la_mayor_parte_del_tiempo
+se_siente_desamparado_con_frecuencia
+con_frecuencia_se_siente_desvelado_y_nervioso
+prefiere_quedarse_en_casa_a_salir_y_realizar_cosas_nuevas
+se_preocupa_con_frecuencia_por_el_futuro
+piensa_que_tiene_más_problemas_de_memoria_que_las_demás_personas
+piensa_que_es_bueno_estar_vivo_hoy
+se_siente_triste_y_desanimado_con_frecuencia
+se_siente_inútil_en_su_estado_actual
+se_preocupa_mucho_por_el_pasado
+le_parece_que_la_vida_es_algo_apasionante
+le_cuesta_mucho_emprender_nuevos_proyectos
+se_siente_con_energías
+piensa_que_su_situación_no_tiene_arreglo
+piensa_que_la_mayor_parte_de_la_gente_está_mejor_que_usted
+se_disgusta_con_frecuencia_por_cosas_sin_importancia
+siente_ganas_de_llorar_frecuentemente
+tiene_dificultad_para_concentrarse
+disfruta_al_levantarse_de_mañana
+prefiere_evitar_las_reuniones_sociales
+le_resulta_fácil_tomar_decisiones
+siente_su_mente_tan_despejada_como_antes
+puntaje_total_o_más_ptos_no_aplica_cies_seguir_con_mindfulness
+complete
+survey_timestamp
+patrón_verano
+patrón_invierno
+patrón_estacional
+ssi_no_aplica_ptos_puntaje_típico_o_promedio_ptos_winter_blues_ptos_sad_o_más
+severidad
+horas_de_sueño_en_invierno
+horas_de_sueño_en_primavera
+horas_de_sueño_en_verano
+horas_de_sueño_en_otoño
+complete
+survey_timestamp
+hormigueo_o_entumecimiento
+sensación_de_calor
+temblor_de_piernas
+incapacidad_de_relajarse
+miedo_a_que_suceda_lo_peor
+mareo_o_aturdimiento
+palpitaciones_o_taquicardia
+sensaciones_de_inestabilidad_e_inseguridad_física
+terrores
+nerviosismo
+sensación_de_ahogo
+temblores_de_manos
+temblores_generalizados_o_estremecimiento
+miedo_a_perder_el_control
+dificultad_para_respirar
+miedo_a_morirse
+sobresaltos
+molestias_digestivas_o_abdominales
+palidez
+rubor_facial
+sudoración_no_debida_al_calor
+puntaje
+interpretación
+complete
+survey_timestamp
+visuoespacial/ejecutiva
+identificación
+atención
+lenguaje
+abstracción
+recuerdo_diferido
+orientación
+puntaje_total_moca
+complete
+survey_timestamp
+baño_esponja_ducha_o_bañera
+vestido
+uso_del_váter
+movilidad
+continencia_esfinteriana
+alimentación
+interpretación_katz
+complete
+survey_timestamp
+te_abruman_fácilmente_los_estímulos_sensoriales_fuertes
+pareces_estar_al_tanto_de_las_sutilezas_que_te_rodean
+te_afectan_los_estados_de_ánimo_de_otras_personas
+tiendes_a_ser_más_sensible_al_dolor
+necesitas_escaparte_y_tener_algo_de_privacidad_durante_los_días_ocupados_y_de_trabajo_duro_en_una_habitación_oscura_o_en_cualquier_lugar_donde_puedas_tener_algo_de_privacidad_y_alivio_de_tanta_estimulación
+eres_particularmente_sensible_a_los_efectos_de_la_cafeína
+te_sientes_fácilmente_abrumado_por_cosas_como_luces_brillantes_olores_fuertes_tela_gruesa_o_áspera_o_sirenas_cercanas
+tienes_una_vida_interior_rica_y_compleja
+te_molestan_los_ruidos_fuertes
+te_conmueven_profundamente_las_artes_escénicas_o_la_música
+tu_sistema_nervioso_a_veces_te_hace_sentir_tan_agotado_que_solo_quieres_alejarte_de_todo
+eres_una_persona_concienzuda
+te_asustas_fácilmente
+te_afecta_mucho_tener_que_hacer_gran_cantidad_de_cosas_en_poco_tiempo
+cuando_las_personas_se_sienten_incómodas_en_un_entorno_físico_tiendes_a_saber_qué_se_debe_hacer_para_que_se_sientan_más_cómodas_como_cambiar_la_iluminación_o_los_asientos
+te_molesta_cuando_la_gente_te_obliga_a_hacer_demasiadas_cosas_a_la_vez
+te_esfuerzas_por_evitar_cometer_errores_u_olvidar_cosas
+puntaje
+complete
+survey_timestamp
+peso
+talla
+imc
+clasificación_del_estado_nutricional_según_imc_normal_sobrepeso_obeso_>
+complete
+survey_timestamp
+porcentaje_de_grasa_total
+porcentaje_de_grasa_brazo_izquierdo
+porcentaje_de_grasa_brazo_derecho
+porcentaje_de_grasa_pierna_derecha
+porcentaje_de_grasa_pierna_izquierda
+porcentaje_de_grasa_del_torso
+masa_muscular_total
+masa_muscular_brazo_izquierdo
+masa_muscular_brazo_derecho
+masa_muscular_pierna_derecha
+masa_muscular_pierna_izquierda
+masa_muscular_del_torso
+peso_corporal
+porcentaje_de_agua_corporal
+porcentaje_de_masa_ósea
+porcentaje_de_grasa_visceral
+metabolismo_basal
+edad_calculada
+complete
+survey_timestamp
+número_de_pasos
+categorización
+observaciones
+complete
+survey_timestamp
+fc_max_estimada
+mean_rr_pre
+rmssd_pre
+sd_pre
+pns_índex_pre
+mean_hr_pre
+stress_índex_pre
+sd_pre
+sns_índex_pre
+sdnn_pre
+vlf_pre
+lf_pre
+hf_pre
+borg_pre
+mean_rr_peri
+rmssd_peri
+sd_peri
+pns_índex_peri
+mean_hr_peri
+stress_índex_peri
+sd_peri
+sns_índex_peri
+sdnn_peri
+vlf_peri
+lf_peri
+hf_peri
+borg_post
+mean_rr_post
+rmssd_post
+sd_post
+pns_índex_post
+mean_hr_post
+stress_índex_post
+sd_post
+sns_índex_post
+sdnn_post
+vlf_post
+lf_post
+hf_post
+complete
+survey_timestamp
+un_pie_al_lado_del_otro
+posición_semi_tándem
+posición_tándem
+test_de_velocidad_de_marcha_m_mide_el_tiempo_invertido_para_caminar_metros_a_paso_normal_utilizar_el_mejor_tiempo_de_dos_intentos
+test_de_levantarse_de_la_silla_repeticiones_medir_tiempo_invertido_en_levantarse_veces_de_la_silla_con_la_espalda_recta_lo_más_rápido_posible_con_los_brazos_cruzados
+puntaje_sppb
+categorización_considerar_ptos_sppb_limitación_mínima_o_leve_ptos_sppb_limitación_leve_ptos_sppb_limitación_moderada_ptos_sppb_limitación_grave
+complete
+survey_timestamp
+concentración
+average_recovery
+range
+complete
