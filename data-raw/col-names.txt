@@ -1,0 +1,224 @@
+Record ID
+Event Name
+Repeat Instrument
+Repeat Instance
+Survey Identifier
+Survey Timestamp
+Código personal
+Nombre
+Apellido
+Sexo
+Rut
+Teléfono
+Correo electrónico
+Edad
+Complete?
+Survey Timestamp
+Fecha revisión 
+¿Presenta alguna enfermedad física o metabólica?
+¿Presenta alguna enfermedad psicológica?
+Medicamentos
+Cirugías recientes
+Complete?
+Survey Timestamp
+PAS inicio mmHg
+PAD inicio mmHg
+PAM inicio
+PP media mmHg
+Frecuencia cardíaca basal
+Frecuencia cardíaca máxima
+Complete?
+Survey Timestamp
+¿En el fondo está satisfecho con su vida?
+¿Ha abandonado muchas de sus actividades y pasatiempos?
+¿Siente que su vida está vacía? 
+¿Se aburre con frecuencia?
+¿Tiene esperanza en el futuro?
+¿Le preocupan ideas que no pueda quitar de su cabeza?
+¿Se encuentra de buen ánimo la mayor parte del tiempo? 
+¿Teme que algo malo pueda sucederle?
+¿Se siente feliz la mayor parte del tiempo?
+¿Se siente desamparado con frecuencia?
+¿Con frecuencia se siente desvelado y nervioso?
+¿Prefiere quedarse en casa a salir y realizar cosas nuevas?
+¿Se preocupa con frecuencia por el futuro? 
+¿Piensa que tiene más problemas de memoria que las demás personas?
+¿Piensa que es bueno estar vivo hoy?
+¿Se siente triste y desanimado con frecuencia? 
+¿Se siente inútil en su estado actual?
+¿Se preocupa mucho por el pasado?
+¿Le parece que la vida es algo apasionante?
+¿Le cuesta mucho emprender nuevos proyectos?
+¿Se siente con energías? 
+¿Piensa que su situación no tiene arreglo? 
+¿Piensa que la mayor parte de la gente está mejor que usted? 
+¿Se disgusta con frecuencia por cosas sin importancia?
+¿Siente ganas de llorar frecuentemente?
+¿Tiene dificultad para concentrarse?
+¿Disfruta al levantarse de mañana? 
+¿Prefiere evitar las reuniones sociales?
+¿Le resulta fácil tomar decisiones
+¿Siente su mente tan despejada como antes?
+Puntaje Total     10 o más ptos: no aplica CIES. (seguir con mindfulness).  
+Complete?
+Survey Timestamp
+Patrón Verano
+Patrón Invierno
+Patrón estacional
+SSI    No aplica: 1-3 ptos.  Puntaje típico o promedio: 4-7 ptos.  Winter Blues: 8-10 ptos.  SAD: 11 o más.
+Severidad
+Horas de sueño en invierno
+Horas de sueño en primavera
+Horas de sueño en verano
+Horas de sueño en otoño
+Complete?
+Survey Timestamp
+Hormigueo o entumecimiento
+Sensación de calor
+Temblor de piernas
+Incapacidad de relajarse
+Miedo a que suceda lo peor
+Mareo o aturdimiento
+Palpitaciones o taquicardia
+Sensaciones de inestabilidad e inseguridad física
+Terrores
+Nerviosismo
+Sensación de ahogo
+Temblores de manos
+Temblores generalizados o estremecimiento
+Miedo a perder el control
+Dificultad para respirar 
+Miedo a morirse
+Sobresaltos
+Molestias digestivas o abdominales
+Palidez
+Rubor facial
+Sudoración (no debida al calor)
+Puntaje
+Interpretación
+Complete?
+Survey Timestamp
+Visuoespacial/ejecutiva 
+Identificación
+Atención
+Lenguaje
+Abstracción 
+Recuerdo diferido
+Orientación
+Puntaje total MOCA
+Complete?
+Survey Timestamp
+1. Baño (esponja, ducha, o bañera)
+2. Vestido
+3. Uso del váter 
+4. Movilidad
+5. Continencia esfinteriana 
+6. Alimentación
+Interpretación Katz
+Complete?
+Survey Timestamp
+1. ¿Te abruman fácilmente los estímulos sensoriales fuertes?
+2. ¿Pareces estar al tanto de las sutilezas que te rodean?
+3. ¿Te afectan los estados de ánimo de otras personas?
+4. ¿Tiendes a ser más sensible al dolor?
+5. ¿Necesitas escaparte y tener algo de privacidad durante los días ocupados y de trabajo duro en una habitación oscura o en cualquier lugar donde puedas tener algo de privacidad y alivio de tanta estimulación?
+6. ¿Eres particularmente sensible a los efectos de la cafeína?
+7. ¿Te sientes fácilmente abrumado por cosas como luces brillantes, olores fuertes, tela gruesa o áspera, o sirenas cercanas?
+8. ¿Tienes una vida interior rica y compleja?
+9. ¿Te molestan los ruidos fuertes?
+10. ¿Te conmueven profundamente las artes escénicas o la música?
+11. ¿Tu sistema nervioso a veces te hace sentir tan agotado que solo quieres alejarte de todo?
+12. ¿Eres una persona concienzuda?
+13. ¿Te asustas fácilmente?
+14. ¿Te afecta mucho tener que hacer gran cantidad de cosas en poco tiempo?
+15. Cuando las personas se sienten incómodas en un entorno físico, ¿tiendes a saber qué se debe hacer para que se sientan más cómodas (como cambiar la iluminación o los asientos)?
+16. ¿Te molesta cuando la gente te obliga a hacer demasiadas cosas a la vez?
+17. ¿Te esfuerzas por evitar cometer errores u olvidar cosas?
+Puntaje
+Complete?
+Survey Timestamp
+Peso
+Talla
+IMC
+Clasificación del estado nutricional según IMC        Normal: 18,5 - 24,9   Sobrepeso: 25,0 - 29,9  Obeso: >30,0
+Complete?
+Survey Timestamp
+Porcentaje de grasa total
+Porcentaje de grasa brazo izquierdo
+Porcentaje de grasa brazo derecho
+Porcentaje de grasa pierna derecha
+Porcentaje de grasa pierna izquierda
+Porcentaje de grasa del torso
+Masa muscular total
+Masa muscular brazo izquierdo
+Masa muscular brazo derecho
+Masa muscular pierna derecha
+Masa muscular pierna izquierda
+Masa muscular del torso
+Peso corporal
+Porcentaje de agua corporal
+Porcentaje de masa ósea
+Porcentaje de grasa visceral
+Metabolismo basal
+Edad calculada
+Complete?
+Survey Timestamp
+Número de pasos
+Categorización 
+OBSERVACIONES
+Complete?
+Survey Timestamp
+FC Max Estimada 
+Mean RR- PRE
+RMSSD-PRE
+SD1- PRE
+PNS Índex- PRE
+Mean HR- PRE
+Stress Índex-PRE
+SD2-PRE
+SNS Índex- PRE
+SDNN-PRE
+VLF-PRE
+LF-PRE
+HF-PRE
+Borg-PRE
+Mean RR- PERI
+RMSSD-PERI
+SD1- PERI
+PNS Índex- PERI
+Mean HR- PERI
+Stress Índex-PERI
+SD2-PERI
+SNS Índex- PERI
+SDNN-PERI
+VLF-PERI
+LF-PERI
+HF-PERI
+Borg-POST
+Mean RR- POST
+RMSSD-POST
+SD1- POST
+PNS Índex- POST
+Mean HR- POST
+Stress Índex-POST
+SD2-POST
+SNS Índex- POST
+SDNN-POST
+VLF-POST
+LF-POST
+HF-POST
+Complete?
+Survey Timestamp
+Un pie al lado del otro
+Posición semi-tándem
+Posición tándem
+Test de velocidad de marcha 3 m    Mide el tiempo invertido para caminar 3 metros a paso normal  (utilizar el mejor tiempo de dos intentos)
+Test de levantarse de la silla (5 repeticiones)     'Medir tiempo invertido en levantarse 5 veces de la silla con la espalda recta lo más rápido posible con los brazos cruzados'
+Puntaje SPPB
+Categorización    Considerar:   10-12 ptos SPPB: limitación mínima o leve.   7-9 ptos SPPB: limitación leve.   4-6 ptos SPPB: limitación moderada.   0-3 ptos SPPB: limitación grave. 
+Complete?
+Survey Timestamp
+Concentración 
+Average % recovery 
+Range (%) 
+Complete?
