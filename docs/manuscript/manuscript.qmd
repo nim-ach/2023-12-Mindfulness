@@ -1,0 +1,134 @@
+---
+title: ""
+bibliography: "misc/ref.bib"
+csl: "misc/vancouver.csl"
+format: 
+  docx: 
+    reference-doc: "ref.docx"
+---
+
+**Título**: [título]
+
+**Title**: [title]
+
+**Autores**: Autor,^1^ Autor,^2^ Autor,^3^ Autor,^4^ Autor,^5^ Autor.^6^ \*
+
+::: {custom-style="Afiliation"}
+^1^ Affiliation, location.
+
+^2^ Affiliation, location.
+
+^3^ Affiliation, location.
+
+^4^ Affiliation, location.
+
+^5^ Affiliation, location.
+
+^6^ Affiliation, location.
+:::
+
+### \*Autor de correspondencia 
+
+Autor, Affiliation, location. e-mail: autor\@mail.com. 
+Address: XXXX. Phone: XXXX.
+
+\newpage
+
+## Abstract 
+
+**Objective**: [...]. **Material and methods**: [...]. **Results**: [...]. **Conclusion**: [...].
+
+**Keywords**: [...].
+
+\newpage
+
+# Introduction
+
+<!---- Antecedentes históricos ---->
+[...].
+
+<!---- Conceptualización del problema ---->
+[...].
+
+<!---- Hipótesis y objetivos ---->
+[...].
+
+# Material and methods
+
+## Study design
+
+[...]. 
+
+## Participants
+
+[...]. 
+
+## Procedures 
+
+[...]. 
+
+## Assessments
+
+### [Assessment 1]
+
+[...]. 
+
+### [Assessment 2]
+
+[...]. 
+
+### [Assessment 3]
+
+[...]. 
+
+## Statistical analysis
+
+[...].
+
+[...], using the *R* programming language for statistical computing, [@rlanguage].
+
+# Results
+
+[...].
+
+[...]. 
+
+# Discussion
+
+[...].
+
+[...].
+
+[...].
+
+# Conclusion
+
+[...]. 
+
+# Author Contributions
+
+All authors listed have made a substantial, direct and intellectual contribution to the work and approved it for publication.
+
+# Funding
+
+[...].
+
+# Institutional Review Board Statement
+
+[...].
+
+# Informed Consent Statement
+
+[...]
+
+# Data availability statement
+
+The raw data supporting the conclusions of this article will be made available by the authors without undue reservation.
+
+# Conflicts of interests
+
+The authors declare that the research was conducted without any commercial or financial relationships construed as a potential conflict of interest.
+
+# Referencias
+
+<div id="refs"></div>
