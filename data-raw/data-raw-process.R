@@ -8,7 +8,9 @@ library(data.table)
 raw <- fread(input = "data-raw/data-raw.csv",
              col.names = readLines("data-raw/helpers/col-names.txt"))
 
-# Data wrangling ----------------------------------------------------------
+
+# Variable removing or cleaning -------------------------------------------
+
 
 ## Removing all variables starting with "rm_" as a flag to eliminate those
 ## variables
@@ -175,7 +177,102 @@ raw[, hrv_sns_post := text_to_number(hrv_sns_post, remove_dash = FALSE)]
 #> bdnf_concentracion <- change to number
 raw[, bdnf_concentracion := text_to_number(bdnf_concentracion, remove_dash = FALSE)]
 
-mindfulness <- raw
+rm(text_to_number)
+
+## Re-checking the dataset
+lapply(raw[, .SD, .SDcols = sapply(raw, is.character)], unique)
+#> No further missclassified variables
+
+
+# Cleaning missing or conflicting observations ----------------------------
+
+## Use the minimum registered age for each participant id
+age_per_id <- raw[, list(
+  sd_edad = fifelse(
+    test = all(is.na(sd_edad)), # Test if all age is missing
+    yes = NA_real_, # If it is, then use NA
+    no = trunc(mean(sd_edad, na.rm = TRUE)) # Otherwise use the minimum of recorded age
+  )), keyby = .(id_record)] # For each person
+raw[, sd_edad := NULL]
+mindfulness <- raw[age_per_id, on = "id_record"]
+rm(age_per_id, raw)
+
+## Correcting mislabeled sex
+mindfulness[id_record == 72, sd_sexo := "Masculino"]
+
+## Repeat assigned sex to each participant for missing rows
+sex_per_id <- mindfulness[, list(sd_sexo = unique(sd_sexo)), id_record][!is.na(sd_sexo)]
+mindfulness <- mindfulness[,-c("sd_sexo")][sex_per_id, on = "id_record"]
+rm(sex_per_id)
+
+## Remove completely empty observations
+mindfulness <- mindfulness[id_record != 37]
+
+## Remove empty baseline observations
+mindfulness <- mindfulness[id_event_name != "Basal" | !is.na(gds_total)]
+
+
+# Checking consistency ----------------------------------------------------
+
+## Age across event name
+mindfulness[, plot(sd_edad ~ as.numeric(id_record), 
+                   col = id_event_name, 
+                   type = "o",
+                   main = "Mean age across id records",
+                   ylab = "Age", xlab = "ID")]
+abline(h = mindfulness$sd_edad |> mean(na.rm = TRUE), lty = 2) # mean age
+mindfulness[, hist(sd_edad, breaks = 20)]
+
+## Function to standardize variables (z-scoring)
+z_score <- function(i) {
+  if (!is.numeric(i)) return(i)
+  (i - mean(i, na.rm = TRUE)) / sd(i, na.rm = TRUE)
+}
+
+## Check standardized numeric variables (z-scores)
+std_vars <- mindfulness[, lapply(.SD, z_score), .SDcols = grepl("^id|^cc|^hrv|^cv", names(mindfulness))]
+
+## Select those observations with 3 SD above or below the mean
+ind <- which(std_vars[,-c(1:2)] > 6, arr.ind = T)
+
+rows <- unique(ind[, 1]) 
+cols <- unique(ind[, 2]) + 2
+
+(outliers <- std_vars[rows, .SD, .SDcols = c(1,2, cols)])
+#> Extreme values are observed for muscle mass and visceral fat
+#> specifically id_records 43 and 68, possibly entry errors
+#> Other outliers were spotted on hrv parameters for id 11
+
+## Inspecting the values in the original scale (not standardized)
+mindfulness[rows][id_record %in% outliers$id_record, .SD, .SDcols = names(outliers)]
+
+## Changing the entry errors
+mindfulness[id_record == 43 & id_event_name == "6-meses", cc_masa_muscular_pierna_derecha := cc_masa_muscular_pierna_derecha / 10]
+mindfulness[id_record == 43 & id_event_name == "6-meses", cc_masa_muscular_pierna_izquierda := cc_masa_muscular_pierna_izquierda / 10]
+mindfulness[id_record == 68 & id_event_name == "2-meses", cc_grasa_visceral_porcentaje := 11]
+
+## Removing extreme outliers
+### First round
+mindfulness[id_record == 11 & id_event_name == "Basal", hrv_vlf_peri := NA]
+mindfulness[id_record == 11 & id_event_name == "Basal", hrv_sdnn_post := NA]
+mindfulness[id_record == 11 & id_event_name == "Basal", hrv_vlf_post := NA]
+mindfulness[id_record == 11 & id_event_name == "Basal", hrv_lf_post := NA]
+mindfulness[id_record == 29 & id_event_name == "Basal", hrv_lf_peri := NA]
+mindfulness[id_record == 18 & id_event_name == "Basal", hrv_sdnn_post := NA]
+mindfulness[id_record == 18 & id_event_name == "Basal", hrv_lf_post := NA]
+mindfulness[id_record == 18 & id_event_name == "Basal", hrv_hf_post := NA]
+
+### Second round of removal extreme outliers
+mindfulness[id_record == 19 & id_event_name == "Basal", hrv_vlf_peri := NA]
+mindfulness[id_record == 14 & id_event_name == "Basal", hrv_lf_peri := NA]
+mindfulness[id_record == 48 & id_event_name == "2-meses", hrv_vlf_post := NA]
+
+### Third and final round of removal
+mindfulness[id_record == 36 & id_event_name == "Basal", hrv_vlf_peri := NA]
+mindfulness[id_record == 36 & id_event_name == "2-meses", hrv_vlf_peri := NA]
+
+### No extreme outliers with z-scores greater than 6 beyond this point
+rm(ind, cols, rows, z_score, std_vars, outliers)
 
 # Data export -------------------------------------------------------------
 
