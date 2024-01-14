@@ -17,4 +17,4 @@ The data structure of this directory is the following:
 
 ## Collaboration and inquiries
 
-To further support the development of this project, you can file an issue in the project repository detailing the problem/suggestion. Further inquiries must be made directly to the principal investigator via [email](mailto:cristian.nunez@umag.cl).
+To further support the development of this project, you can [file an issue](https://github.com/nim-ach/2023-12-Mindfulness/issues/new) in the project repository detailing the problem/suggestion. Further inquiries must be made directly to the principal investigator via [email](mailto:cristian.nunez@umag.cl).
