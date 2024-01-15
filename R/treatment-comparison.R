@@ -20,7 +20,9 @@ library(lme4) # Para estimar modelos con presencia de efectos aleatorios
 data("mindfulness") # Cargamos los datos
 
 
-# Valoración de variables outcome -----------------------------------------
+# Valoración en BDNF ------------------------------------------------------
+
+
 
 bdnf_data <- mindfulness[
   !is.na(bdnf_concentracion), 
@@ -78,3 +80,43 @@ mod_3 <- lme4::lmer(formula = bdnf_concentracion ~ trt_group * id_event_name + (
 #> id_event_name6-meses                    |       -0.31 | [-0.55, -0.03] | 0.020 
 #> trt_groupCombinado:id_event_name6-meses |        0.08 | [-0.26,  0.39] | 0.642 
 
+
+# Valoración en SPPB ------------------------------------------------------
+
+sppb_data <- mindfulness[
+  !is.na(sppb_total), 
+  sppb_total, 
+  keyby = list(id_record, id_event_name, trt_group)
+] 
+
+lme4::lmer(formula = sppb_total ~   id_event_name + (1 | id_record), 
+           data = mindfulness) |> 
+  parameters()
+  # modelbased::estimate_contrasts(contrast = "trt_group", p_adjust = "none")
+
+
+
+# Comparativa pre a post --------------------------------------------------
+
+comp_data <- mindfulness[id_event_name != "2-meses" & trt_group != "Control", .SD, .SDcols = c(1,2,grep("_total$|^hrv_|bdnf_concentracion|trt", names(mindfulness)))]
+
+comp_data <- comp_data |> 
+  melt.data.table(id.vars = c("id_record", "id_event_name","trt_group"))
+
+comp_data <- comp_data[!variable %in% c("hrv_fc_max_estimada", "hrv_borg_pre", 
+                                        "hrv_borg_post", "hsps_total")]
+comp_data[, list(sum(is.na(.SD)), .N), list(variable, id_event_name)]
+
+comp_data[, lm(value ~ id_event_name) |> parameters(), variable
+          ][p < 0.05 & Parameter == "id_event_name6-meses", list(variable, coef = round(Coefficient, 3), p = round(p, 3))]
+#>              variable   coef     p
+#> 1:         moca_total  2.985 0.001
+#> 2:    hrv_stress_peri  4.361 0.048
+#> 3:       hrv_sns_peri  1.067 0.040
+#> 4:      hrv_sdnn_peri -2.207 0.048
+#> 5:         sppb_total  1.196 0.001
+#> 6: bdnf_concentracion -0.263 0.026
+#> 
+## Es posible que el ejercicio y el mindfulness, disminuyan el incremento en la actividad simpática, inducida por el tiempo en los controles
+## Ya que al evaluar el efecto del tiempo sobre indicadores de SNS y Stress observamos un incremento, pero al excluir los controles
+## observamos que esta variacion inducida por el tiempo se pierde, al quedar solo los grupos expuestos a ejercicio.
