@@ -69,7 +69,7 @@ mod_2 <- bdnf_data[, lm(bdnf_concentracion ~ id_event_name) |> bootstrap_paramet
 ## diferencia adicinal en las concentraciones de BDNF. Al evaluar la interacción entre 
 ## el tiempo x grupo, no se observaron trayectorias divergentes en cuanto al efecto sobre
 ## el BDNF, sugiriendo que ambos grupos cambiaron en cantidades similares de pre a post.
-set.seed(1234)
+set.seed(1234) 
 mod_3 <- lme4::lmer(formula = bdnf_concentracion ~ trt_group * id_event_name + (1 | id_record), 
            data = bdnf_data) |> 
   bootstrap_parameters()
@@ -89,34 +89,18 @@ sppb_data <- mindfulness[
   keyby = list(id_record, id_event_name, trt_group)
 ] 
 
-lme4::lmer(formula = sppb_total ~   id_event_name + (1 | id_record), 
+lme4::lmer(formula = sppb_total ~ trt_group * id_event_name + (1 | id_record), 
            data = mindfulness) |> 
   parameters()
-  # modelbased::estimate_contrasts(contrast = "trt_group", p_adjust = "none")
 
-
-
-# Comparativa pre a post --------------------------------------------------
-
-comp_data <- mindfulness[id_event_name != "2-meses" & trt_group != "Control", .SD, .SDcols = c(1,2,grep("_total$|^hrv_|bdnf_concentracion|trt", names(mindfulness)))]
-
-comp_data <- comp_data |> 
-  melt.data.table(id.vars = c("id_record", "id_event_name","trt_group"))
-
-comp_data <- comp_data[!variable %in% c("hrv_fc_max_estimada", "hrv_borg_pre", 
-                                        "hrv_borg_post", "hsps_total")]
-comp_data[, list(sum(is.na(.SD)), .N), list(variable, id_event_name)]
-
-comp_data[, lm(value ~ id_event_name) |> parameters(), variable
-          ][p < 0.05 & Parameter == "id_event_name6-meses", list(variable, coef = round(Coefficient, 3), p = round(p, 3))]
-#>              variable   coef     p
-#> 1:         moca_total  2.985 0.001
-#> 2:    hrv_stress_peri  4.361 0.048
-#> 3:       hrv_sns_peri  1.067 0.040
-#> 4:      hrv_sdnn_peri -2.207 0.048
-#> 5:         sppb_total  1.196 0.001
-#> 6: bdnf_concentracion -0.263 0.026
-#> 
-## Es posible que el ejercicio y el mindfulness, disminuyan el incremento en la actividad simpática, inducida por el tiempo en los controles
-## Ya que al evaluar el efecto del tiempo sobre indicadores de SNS y Stress observamos un incremento, pero al excluir los controles
-## observamos que esta variacion inducida por el tiempo se pierde, al quedar solo los grupos expuestos a ejercicio.
+#> Parameter                                       | Coefficient |   SE |         95% CI | t(146) |      p
+#> -------------------------------------------------------------------------------------------------------
+#> (Intercept)                                     |       10.37 | 0.27 | [ 9.83, 10.91] |  37.85 | < .001
+#> trt group [Ejercicio]                           |       -0.17 | 0.65 | [-1.45,  1.11] |  -0.26 | 0.794 
+#> trt group [Combinado]                           |       -0.53 | 0.46 | [-1.44,  0.38] |  -1.15 | 0.253 
+#> id event name [2-meses]                         |        0.86 | 0.58 | [-0.29,  2.01] |   1.48 | 0.142 
+#> id event name [6-meses]                         |        1.08 | 0.47 | [ 0.16,  2.00] |   2.31 | 0.022 
+#> trt group [Ejercicio] × id event name [2-meses] |        0.11 | 0.88 | [-1.64,  1.85] |   0.12 | 0.902 
+#> trt group [Combinado] × id event name [2-meses] |        0.72 | 0.75 | [-0.77,  2.20] |   0.95 | 0.342 
+#> trt group [Ejercicio] × id event name [6-meses] |        0.22 | 0.79 | [-1.35,  1.79] |   0.28 | 0.780 
+#> trt group [Combinado] × id event name [6-meses] |        0.30 | 0.66 | [-1.01,  1.60] |   0.45 | 0.653 
