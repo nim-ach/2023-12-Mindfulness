@@ -44,7 +44,7 @@ Address: XXXX. Phone: XXXX.
 
 # Introduction
 
-The process of aging is accompanied by a multitude of physiological changes that have the potential to significantly impact people's overall health and well-being. Body composition and cardiovascular function are particularly relevant, as they are closely associated with the aging process. In recent times, there has been a growing interest in comprehending the interplay between physical fitness, body composition, and cardiac autonomic response to exercise in older individuals, as these factors play pivotal roles in determining health outcomes within this age group.
+The process of aging is accompanied by a multitude of physiological changes that have the potential to significantly impact people's overall health and well-being[@pmid:30185958], [@pmid:31154942]. Body composition and cardiovascular function are particularly relevant, as they are closely associated with the aging process [@pmid:36948782], [@pmid:36443946], [@pmid:30065258], [@pmid:36918543], [@pmid:32483625]. In recent times, there has been a growing interest in comprehending the interplay between physical fitness, body composition, and cardiac autonomic response to exercise in older individuals, as these factors play pivotal roles in determining health outcomes within this age group.
 
 <!---- Antecedentes históricos ---->
 
@@ -82,9 +82,9 @@ All participating subjects gave their permission and provided informed consent b
 
 During recruitment,the participants were instructed to avoid the use of psychoactive substances for the 24 hours prior to the assessment, and to sleep for at least 7 hours during the previous night. Upon arrival, participants were informed about the study aims and risks associated with their participation, and the socio-demographic and medical information was collected during the initial interview. Then, Body composition parameters were measured using bioimpedance analysis.
 
-Cardiac autonomic response to physical exercise was measured as previously validated for this age group (Castillo-Aguilar et al., 2023). The protocol is briefly described below: 
+Cardiac autonomic response to physical exercise was measured as previously validated for this age group [@ijerph20054456]. The protocol is briefly described below: 
 
-HRV was recorded through a non-invasive chest band, immediately before, during, and immediatly after the execution of the two-minutes step test (TMST). Vital signs, including blood pressure, were monitored throughout the test, and participants' well-being was visually checked to ensure they were comfortable and mentally prepared. For resting HRV measurements (prior and posterior to TMST), the volunteers remained seated in a chair, while proper support of the feet and back, and avoiding talking during the recording was ensured. RR intervals were recorded continuously during the last 10 min of rest, and were subsequently analyzed for 5 min in each occasion. The breathing rate was spontaneous. As part of the protocol, it was ensured that the participant had a blood pressure less than 140/90 mmHg to start the HRV measurements.
+HRV was recorded through a non-invasive chest band, immediately before, during, and immediately after the execution of the two-minutes step test (TMST). Vital signs, including blood pressure, were monitored throughout the test, and participants' well-being was visually checked to ensure they were comfortable and mentally prepared. For resting HRV measurements (prior and posterior to TMST), the volunteers remained seated in a chair, while proper support of the feet and back, and avoiding talking during the recording was ensured. RR intervals were recorded continuously during the last 10 min of rest, and were subsequently analyzed for 5 min in each occasion. The breathing rate was spontaneous. As part of the protocol, it was ensured that the participant had a blood pressure less than 140/90 mmHg to start the HRV measurements.
 
 Finally, after 15 minutes of resting from the TMST, the Short Physical Performance Battery (SPPB) was applied to the participants. Blood pressure, heart rate and general aspect of the subjects was verified before ending the session. 
 
@@ -94,7 +94,7 @@ All the assessments were made between 09:00 and 11:00 hours of the morning. Meas
 
 ### [Short Physical Performance Battery]
 
-SPPB consists of a physical test used to measure three components of physical fitness, described below (Guralnik et al., 1994):
+SPPB consists of a physical test used to measure three components of physical fitness, described below [@Guralnik1994]:
 
 Balance: to achieve the maximal score (4 points), the subject should be able to stay balanced for at least 10 seconds in side-by-side stand (feet together), semi-tandem stand and tandem stand.
 
@@ -106,14 +106,14 @@ To obtain the final score, the summing of the three components is calculated, wi
 
 ### [Body Composition]
 
-Body mass (kg) and total body fat (%) were assessed by bioimpedance using the Tanita BC-558 Ironman Segmental Body Composition Monitor (Tanita Ironman, Arlington Heights, IL 60005, USA), with a concordance of 89.3% compared to the Dual X-ray Absorption test using standard measurement protocols (Mialich et al., 2011).  
+Body mass (kg) and total body fat (%) were assessed by bioimpedance using the Tanita BC-558 Ironman Segmental Body Composition Monitor (Tanita Ironman, Arlington Heights, IL 60005, USA), with a concordance of 89.3% compared to the Dual X-ray Absorption test using standard measurement protocols [@Mialich2011].  
 
 ### [Cardiac Autonomic Activity]
 
 Cardiac autonomic activity was assessed using RR interval recordings obtained through the Polar Team2 system (Polar®) application. Artifacts and ectopic heartbeats, which did not exceed 3% of the recorded data, were excluded [32]. Time-domain parameters considered for analysis included the square root of the mean squared differences of successive RR intervals (RMSSD, expressed in ms) as an index of parasympathetic activity [33], and the standard deviation of RR intervals (SDNN), reflecting total variability encompassing both sympathetic and parasympathetic contributions to cardiac autonomic function [34,35]. Additionally, the Stress Index (SI) and Parasympathetic and Sympathetic Nervous System Index (PNS and SNS, respectively) were calculated. The PNS Index, indicative of total vagal stimulation, was derived from mean R-R intervals, RMSSD, and Poincaré Plot Index SD1 in normalized units (linked to RMSSD), representing deviations from normal population averages [34,39]. The SNS Index, reflecting total sympathetic stimulation, was derived from mean R-R intervals, Baevsky’s Stress Index (positively related to cardiovascular system stress and cardiac sympathetic activity), and the Poincaré Plot Index SD2 in normalized units (related to SDNN) with interpretation similar to the PNS Index [34,39]. The SI serves as an indicator representing the ANS control system's workload [40], normalized by the square root of Baevsky’s SI [41]. All analyses were conducted using Kubios HRV® software (Kuopio, Finland). 
 ### [Two-Minutes Step Test]
 
-The TMST is a sub-test from the Senior Fitness Test, demanding a low to moderate intensity (Rikli, 1999, Castillo-Aguilar et al., 2023). The test consists of a two-minute assessment designed to evaluate cardiorrespiratory fitness. Participants are instructed to raise their right knee to a marked point on a wall as many times as possible within the given time frame, ensuring that each raise reaches at least a 70° angle at the thigh-femoral joint.
+The TMST is a sub-test from the Senior Fitness Test, demanding a low to moderate intensity [@Rikli1999], [@ijerph20054456]. The test consists of a two-minute assessment designed to evaluate cardiorrespiratory fitness. Participants are instructed to raise their right knee to a marked point on a wall as many times as possible within the given time frame, ensuring that each raise reaches at least a 70° angle at the thigh-femoral joint.
 
 
 ## Statistical analysis
