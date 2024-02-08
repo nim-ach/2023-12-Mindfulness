@@ -7,9 +7,9 @@ format:
     reference-doc: "ref.docx"
 ---
 
-**Título**: [La Aptitud Física se Relaciona con la Grasa Corporal y la Respuesta Autonómica Cardíaca al Ejercicio Físico en Personas Mayores]
+**Título**: La Aptitud Física se Relaciona con la Grasa Corporal y la Respuesta Autonómica Cardíaca al Ejercicio Físico en Personas Mayores
 
-**Title**: [Physical Fitness is Related to Body Fat and Cardiac Autonomic Response to Exercise in Older People]
+**Title**: Physical Fitness is Related to Body Fat and Cardiac Autonomic Response to Exercise in Older People
 
 **Autores**: Autor,^1^ Autor,^2^ Autor,^3^ Autor,^4^ Autor,^5^ Autor.^6^ \*
 
@@ -92,7 +92,7 @@ All the assessments were made between 09:00 and 11:00 hours of the morning. Meas
 
 ## Instruments
 
-### [Short Physical Performance Battery]
+### Short Physical Performance Battery
 
 SPPB consists of a physical test used to measure three components of physical fitness, described below (Guralnik et al., 1994):
 
@@ -104,29 +104,88 @@ Lower body fitness: The subjects are asked to perform 5 chair stands without usi
 
 To obtain the final score, the summing of the three components is calculated, with a maximal total score of 12 points.
 
-### [Body Composition]
+### Body Composition
 
 Body mass (kg) and total body fat (%) were assessed by bioimpedance using the Tanita BC-558 Ironman Segmental Body Composition Monitor (Tanita Ironman, Arlington Heights, IL 60005, USA), with a concordance of 89.3% compared to the Dual X-ray Absorption test using standard measurement protocols (Mialich et al., 2011).  
 
-### [Cardiac Autonomic Activity]
+### Cardiac Autonomic Activity
 
 Cardiac autonomic activity was assessed using RR interval recordings obtained through the Polar Team2 system (Polar®) application. Artifacts and ectopic heartbeats, which did not exceed 3% of the recorded data, were excluded [32]. Time-domain parameters considered for analysis included the square root of the mean squared differences of successive RR intervals (RMSSD, expressed in ms) as an index of parasympathetic activity [33], and the standard deviation of RR intervals (SDNN), reflecting total variability encompassing both sympathetic and parasympathetic contributions to cardiac autonomic function [34,35]. Additionally, the Stress Index (SI) and Parasympathetic and Sympathetic Nervous System Index (PNS and SNS, respectively) were calculated. The PNS Index, indicative of total vagal stimulation, was derived from mean R-R intervals, RMSSD, and Poincaré Plot Index SD1 in normalized units (linked to RMSSD), representing deviations from normal population averages [34,39]. The SNS Index, reflecting total sympathetic stimulation, was derived from mean R-R intervals, Baevsky’s Stress Index (positively related to cardiovascular system stress and cardiac sympathetic activity), and the Poincaré Plot Index SD2 in normalized units (related to SDNN) with interpretation similar to the PNS Index [34,39]. The SI serves as an indicator representing the ANS control system's workload [40], normalized by the square root of Baevsky’s SI [41]. All analyses were conducted using Kubios HRV® software (Kuopio, Finland). 
-### [Two-Minutes Step Test]
+
+### Two-Minutes Step Test
 
 The TMST is a sub-test from the Senior Fitness Test, demanding a low to moderate intensity (Rikli, 1999, Castillo-Aguilar et al., 2023). The test consists of a two-minute assessment designed to evaluate cardiorrespiratory fitness. Participants are instructed to raise their right knee to a marked point on a wall as many times as possible within the given time frame, ensuring that each raise reaches at least a 70° angle at the thigh-femoral joint.
 
 
 ## Statistical analysis
 
-[...].
-
 [...], using the *R* programming language for statistical computing, [@rlanguage].
 
 # Results
 
-[...].
+## Sample characteristics
 
-[...]. 
+Sociodemographic characteristic of the sample can be seen in table 1.
+
+## Body composition and autonomic response
+
+We observed that body fat percentage was linked to a lower SNS (r = -0.252, p = 0.030) and Stress index (r = 0.258, p = 0.027) response during the intervention. However, body fat percentage was positively correlated with time domain HRV during exercise, more specifically RMSSD (r = 0.253, p = 0.029) and SDNN (r = 0.269, p = 0.020).
+
+<!---
+#> cc_grasa_total_porcentaje, hrv_rmssd_peri, r = 0.253, p = 0.029
+#> cc_grasa_total_porcentaje, hrv_rmssd_peri, rho = 0.249, p = 0.032
+#> 
+#> cc_grasa_total_porcentaje, hrv_stress_peri, r = -0.258, p = 0.027
+#> cc_grasa_total_porcentaje, hrv_stress_peri, rho = -0.282, p = 0.015
+#> 
+#> cc_grasa_total_porcentaje, hrv_sns_peri, r = -0.252, p = 0.03
+#> cc_grasa_total_porcentaje, hrv_sns_peri, rho = -0.257, p = 0.027
+#> 
+#> cc_grasa_total_porcentaje, hrv_sdnn_peri, r = 0.269, p = 0.02
+#> cc_grasa_total_porcentaje, hrv_sdnn_peri, rho = 0.284, p = 0.014
+--->
+
+<!--- Figura con cuatro mostrando las correlaciones --->
+
+## Body composition and physical fitness
+
+In addition, a greater body fat percentage was negatively correlated with physical fitness (r = -0.273, p = 0.015). 
+
+<!---
+#> cc_grasa_total_porcentaje, sppb_total, r = -0.273, p = 0.015
+#> cc_grasa_total_porcentaje, sppb_total, rho = -0.25, p = 0.026
+--->
+
+## Physical fitness and cardiac autonomic response to exercise
+
+Physical fitness was positively correlated with a greater simpathetic activity during exercise, which was reflected by SNS index (r = 0.313, p = 0.006), mean HR (r = 0.355, p = 0.002) and its inverse counterpart mean R-R (r = -0.35, p = 0.002).
+
+<!--- 
+#> hrv_sns_peri, sppb_total, r = 0.313, p = 0.006
+#> hrv_sns_peri, sppb_total, rho = 0.332, p = 0.004
+
+#> hrv_mean_hr_peri, sppb_total, r = 0.355, p = 0.002
+#> hrv_mean_hr_peri, sppb_total, rho = 0.375, p = 0.001
+
+#> hrv_mean_rr_peri, sppb_total, r = -0.35, p = 0.002
+#> hrv_mean_rr_peri, sppb_total, rho = -0.38, p = 0.001
+
+--->
+
+However, this appears to be accompanied by an proportional decrease in parasympathetic drive during exercise with increasing levels of physical fitness, which was denoted by the inverse correlation of the later with PNS index during (r = -0.375, p = 0.001) and after exercise (r = -0.229, p = 0.049), in addition to RMSSD during exercise (r = -0.294, p = 0.010)
+
+<!--- 
+#> hrv_pns_peri, sppb_total, r = -0.375, p = 0.001
+#> hrv_pns_peri, sppb_total, rho = -0.372, p = 0.001
+
+#> hrv_pns_post, sppb_total, r = -0.229, p = 0.049
+#> hrv_pns_post, sppb_total, rho = -0.238, p = 0.04
+
+#> hrv_rmssd_peri, sppb_total, r = -0.294, p = 0.01
+#> hrv_rmssd_peri, sppb_total, rho = -0.282, p = 0.014
+--->
+
+<!--- Figura 2 --->
 
 # Discussion
 

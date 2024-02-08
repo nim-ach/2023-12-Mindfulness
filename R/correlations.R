@@ -53,7 +53,8 @@ all_tag_pairs <- function() {
   apply(out, 1, any)
 }
 
-# Correlaciones -----------------------------------------------------------
+
+# Pearson r ---------------------------------------------------------------
 
 ## Primero realizaremos correlaciones entre los sujetos evaluados basalmente
 ## para explorar las relaciones latentes entre variables
@@ -73,9 +74,33 @@ cor_1 <- correlation(
 cor_1 <- as.data.table(cor_1)
 
 results_cor_1 <- cor_1[all_tag_pairs() & p < 0.05
-                       ][, list(Parameter1, Parameter2, r, p)]
+                       ][, list(Parameter1, Parameter2, r, p, n_Obs)]
 
 results_cor_1[order(Parameter1), list(
   paste0(Parameter1, ", ", Parameter2, ", r = ", round(r, 3), ", p = ", round(p, 3))
-)][, paste0(V1, collapse = "\n")] |> cat(file = "R/correlations_results.txt")
+)][, paste0(V1, collapse = "\n")] |> cat()
 
+
+# Spearman rho ------------------------------------------------------------
+
+cor_2 <- correlation(
+  data = mindfulness[
+    id_event_name == "Basal", 
+    j = .SD, 
+    .SDcols = grepl(
+      pattern = "^cc|^cv|^hrv|total$", 
+      x = names(mindfulness)
+    )
+  ],
+  p_adjust = "none", 
+  method = "spearman"
+)
+
+cor_2 <- as.data.table(cor_2)
+
+results_cor_2 <- cor_2[all_tag_pairs() & p < 0.05
+][, list(Parameter1, Parameter2, rho, p, n_Obs)]
+
+results_cor_2[order(Parameter1), list(
+  paste0(Parameter1, ", ", Parameter2, ", rho = ", round(rho, 3), ", p = ", round(p, 3))
+)][, paste0(V1, collapse = "\n")] |> cat()
