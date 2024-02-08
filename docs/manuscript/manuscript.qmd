@@ -44,7 +44,7 @@ Address: XXXX. Phone: XXXX.
 
 # Introduction
 
-The process of aging is accompanied by a multitude of physiological changes that have the potential to significantly impact people's overall health and well-being[@pmid:30185958], [@pmid:31154942]. Body composition and cardiovascular function are particularly relevant, as they are closely associated with the aging process [@pmid:36948782], [@pmid:36443946], [@pmid:30065258], [@pmid:36918543], [@pmid:32483625]. In recent times, there has been a growing interest in comprehending the interplay between physical fitness, body composition, and cardiac autonomic response to exercise in older individuals, as these factors play pivotal roles in determining health outcomes within this age group.
+The process of aging is accompanied by a multitude of physiological changes that have the potential to significantly impact people's overall health and well-being[@pmid:30185958], [@pmid:31154942]. Body composition and cardiovascular function are particularly relevant, as they are closely associated with the aging process [@pmid:36948782; @pmid:36443946; @pmid:30065258; @pmid:36918543; @pmid:32483625]. In recent times, there has been a growing interest in comprehending the interplay between physical fitness, body composition, and cardiac autonomic response to exercise in older individuals, as these factors play pivotal roles in determining health outcomes within this age group.
 
 <!---- Antecedentes históricos ---->
 
