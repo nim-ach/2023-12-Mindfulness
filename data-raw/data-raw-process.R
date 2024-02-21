@@ -119,11 +119,6 @@ raw[, tm_categoria := factor(tm_categoria,
                              levels = c("BAJO RANGO", "NORMAL", "ALTO RANGO"),
                              labels = c("Bajo", "Normal", "Alto"))]
 
-#> cc_imc_categoria <- standardize as ordered factor
-raw[, cc_imc_categoria := factor(cc_imc_categoria, 
-                                 levels = c("Peso normal", "Sobrepeso", "Obeso"),
-                                 ordered = TRUE)]
-
 ## Function to change missformated numbers into numeric format
 text_to_number <- function(x, remove_dash = TRUE) {
   x[grepl("[A-Za-z]", x) | nchar(x) == 0] <- NA
@@ -148,6 +143,21 @@ raw[, cc_masa_muscular_brazo_derecho := text_to_number(cc_masa_muscular_brazo_de
 
 #> cc_peso_corporal <- change to number
 raw[, cc_peso_corporal := text_to_number(cc_peso_corporal)]
+
+#> cc_talla <- Remove outlier
+raw[cc_talla == "", cc_talla := NA]
+raw[cc_talla %like% "\\,", cc_talla := gsub("\\,", "\\.", cc_talla)]
+raw[, cc_talla := as.numeric(cc_talla)]
+raw[cc_talla < 2, cc_talla := cc_talla * 100]
+
+#> cc_imc <- recalculate
+raw[c(68,187), cc_peso_corporal := round(cc_imc * (cc_talla / 100), 1)]
+raw[, cc_imc := round(cc_peso_corporal / ((cc_talla / 100) ^ 2), 2)]
+
+#> cc_imc_categoria <- Recompute labels
+raw[, cc_imc_categoria := cut(cc_imc, 
+                              breaks = c(0, 18.5, 24.9, 29.9, Inf), 
+                              labels = c("Infrapeso", "Normopeso", "Sobrepeso", "Obeso"))]
 
 #> cc_masa_osea_porcentaje <- change to number
 raw[, cc_masa_osea_porcentaje := text_to_number(cc_masa_osea_porcentaje)]
@@ -233,7 +243,7 @@ z_score <- function(i) {
 std_vars <- mindfulness[, lapply(.SD, z_score), .SDcols = grepl("^id|^cc|^hrv|^cv", names(mindfulness))]
 
 ## Select those observations with 3 SD above or below the mean
-ind <- which(std_vars[,-c(1:2)] > 6, arr.ind = T)
+ind <- suppressWarnings(which(std_vars[,-c(1:2)] > 6, arr.ind = T))
 
 rows <- unique(ind[, 1]) 
 cols <- unique(ind[, 2]) + 2
