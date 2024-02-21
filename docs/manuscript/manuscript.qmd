@@ -6,8 +6,7 @@ format:
   docx: 
     reference-doc: "ref.docx"
 ---
-
-**Title**: Physical fitness is related to body fat and cardiac autonomic response to exercise in older people.
+**Title**: Physical Fitness is Related to Body Fat and Heart Rate Variability during Exercise in Community-Dwelling Older People.
 
 **Authors**: Autor,^1^ Autor,^2^ Autor,^3^ Autor,^4^ Autor,^5^ Autor.^6^ \*
 
@@ -25,7 +24,7 @@ format:
 ^6^ Affiliation, location.
 :::
 
-### \*Correspondence 
+### \*Corresponding author 
 
 Autor, Affiliation, location. e-mail: autor\@mail.com. 
 Address: XXXX. Phone: XXXX.
@@ -34,51 +33,53 @@ Address: XXXX. Phone: XXXX.
 
 ## Abstract 
 
-**Objective**: [...]. **Material and methods**: [...]. **Results**: [...]. **Conclusion**: [...].
+**Objective**: to assess the correlation between physical fitness, body composition, and cardiac autonomic activity during moderate-intensity exercise in older people. **Material and methods**: an observational cross-sectional study was conducted in XX community-dwelling older people, recruited by non-probabilistic sampling. To obtain body composition parameters, a bioimpedance analysis was made, then, the Short Physical Performance Battery (SPPB) was used to assess physical fitness, and the Heart Rate Variability (HRV) was recorded before, during and after the Two-Minute Step Test (TMST), to assess cardiac autonomic response to physical exercise.  **Results**: SPPB score was negatively related to body fat percentage (r = -0.273, p = 0.015), but positively related to SNS index during exercise (r = 0.313, p = 0.006). Also, a negative link existed between body fat and sympathetic activity: SNS index (r = -0.252, p = 0.030) and Stress index (r = 0.258, p = 0.027) during exercise. But a positive link with parasympathetic activity: RMSSD (r = 0.253, p = 0.029) and SDNN (r = 0.269, p = 0.020) **Conclusion**: the findings unveil a triangular relationship, where body fat percentage significantly impacts physical fitness and cardiac autonomic activity during exercise, while a greater sympathetic activity correlates with higher physical fitness. Additionally, physical fitness moderates the link between body fat and cardiac autonomic activity, emphasizing its importance for older adults' health. Further research is needed to explore psychological variables' moderating effects.
 
-**Keywords**: [...].
+**Keywords**: Aged, Physical Functional Performance, Exercise Test, Body Composition, Autonomic Nervous System
 
 \newpage
 
 # Introduction
 
-The process of aging is accompanied by a multitude of physiological changes that have the potential to significantly impact people's overall health and well-being[@pmid:30185958], [@pmid:31154942]. Body composition and cardiovascular function are particularly relevant, as they are closely associated with the aging process [@pmid:36948782; @pmid:36443946; @pmid:30065258; @pmid:36918543; @pmid:32483625]. In recent times, there has been a growing interest in comprehending the interplay between physical fitness, body composition, and cardiac autonomic response to exercise in older individuals, as these factors play pivotal roles in determining health outcomes within this age group.
+The process of aging is accompanied by a multitude of physiological changes that have the potential to significantly impact people's overall health and well-being [@pmid:30185958; @pmid:31154942]. Body composition and cardiovascular function are particularly relevant, as they are closely associated with the aging process [@pmid:36948782; @pmid:36443946; @pmid:30065258; @pmid:36918543; @pmid:32483625]. In recent times, there has been a growing interest in comprehending the interplay between physical fitness, body composition, and cardiac autonomic response to exercise in older individuals, as these factors play pivotal roles in determining health outcomes within this age group. 
 
 <!---- Historical precedents ---->
 
-Physical fitness is defined as the ability to perform daily tasks with vigor and without undue fatigue. It is a crucial component of healthy aging. The term encompasses a multitude of aspects, including cardiovascular endurance, muscular strength, flexibility, and balance. Numerous studies have demonstrated the positive impact of physical fitness on overall health and longevity, highlighting its role in reducing the risk of chronic diseases, improving quality of life, and improving functional independence in older adults.
+Physical fitness has been classically defined as the ability to perform daily tasks with vigor and without undue fatigue, and with ample energy to enjoy leisure-time pursuits and to meet unforeseen emergencies [@pmid:3920716]. Therefor, it is a crucial component of healthy aging. The term encompasses a multitude of aspects, typically including cardiorespiratory endurance, muscular endurance and strength, body composition, and flexibility [@pmid:3920711]. Numerous studies have demonstrated the positive impact of physical fitness on overall health and longevity, highlighting its role in reducing the risk of chronic diseases, and improving quality of life and functional independence in older adults [@pmid:9177581; @pmid:29293447; @pmid:30768197; @pmid:36332759]
 
-Moreover, the alteration of body composition, specifically the proportion of body fat, is accompanied by significant changes with age, resulting in a tendency towards an increase in adiposity and a decrease in lean muscle mass. Excessive body fat accumulation, particularly visceral adiposity, has been associated with a higher risk of cardiovascular disease, metabolic disorders, and functional limitations in older individuals.
+Moreover, the alteration of body composition, specifically the proportion of body fat, is accompanied by significant changes with age, resulting in a tendency towards an increase in adiposity and a decrease in lean muscle mass [@pmid:35968789; @pmid:33673927]. Excessive body fat accumulation, particularly visceral adiposity, has been associated with a higher risk of cardiovascular disease, metabolic disorders, and functional limitations in older individuals [@pmid:31301983; @pmid:33882682].
 
-Autonomic nervous system (ANS) plays a critical role in regulating cardiovascular function, with sympathetic and parasympathetic branches exerting opposing effects on heart rate and vascular tone. Furthermore, during stressful situations, such as physical exercise, the ANS ensures a sufficient cardiac response to higher metabolic demands.  The measurement of heart rate variability (HRV), serves as a non-invasive indicator of ANS activity and cardiovascular health. A reduction in HRV has been linked to various adverse outcomes, including cardiovascular events, mortality, and impaired exercise tolerance.
+Autonomic nervous system (ANS) plays a critical role in regulating cardiovascular function, with sympathetic and parasympathetic branches exerting opposing effects on heart rate and vascular tone. Furthermore, during stressful situations, such as physical exercise, the ANS ensures a sufficient cardiac response to higher metabolic demands [@pmid:16627049].  The measurement of heart rate variability (HRV), serves as a non-invasive indicator of ANS activity and cardiovascular health [@pmid:37641564; @pmid:29033120]. A reduction in rest HRV has been linked to various adverse outcomes, including cardiovascular events and morbidity, while insufficient HRV reduction during exercise may lead to impaired physical capacity [@pmid:29033120; @pmid:33390146; @pmid:36054204]. 
+
+However, HRV is not only influenced by physical and environmental stressors. Psychological factors such as anxiety and depression have also been linked to changes in ANS activity [@doi:10.1016/j.jad.2018.04.071; @pmid:35340102]. Notably, older individuals may be more susceptible to these psychological factors, making it crucial to measure and control for their effects [@pmid:38007499; @pmid:25980510].
 
 <!---- Conceptualization of the issue ---->
 
-However, despite extensive research into physical fitness, body composition, and cardiovascular health in older adults, gaps persist in  understanding of their interrelationships and underlying mechanisms. One area of interest is the relationship between physical fitness, body fat percentage, and cardiac autonomic response to exercise in older individuals. Although previous studies have explored these factors independently, few have examined their collective influence on cardiovascular function during exercise in the aging population.
+Despite extensive research into physical fitness, body composition, and cardiovascular health in older adults, gaps persist in  understanding of their interrelationships and underlying mechanisms. One area of interest is the relationship between physical fitness, body fat percentage, and cardiac autonomic response to exercise in older individuals. Although previous studies have explored these factors independently, few have examined their collective influence on physical fitness in the aging population.
 
-The conceptualization of this study is based on the recognition of the interplay between physical fitness, body composition, and autonomic cardiovascular regulation in aging. We aim to answer the following research question: How does physical fitness relate to body fat percentage and cardiac autonomic response to exercise in older people? By elucidating these correlations, our objective is to gain valuable insights into the physiological mechanisms that underlie age-related modifications in cardiovascular function and identify potential interventions to enhance health outcomes in older adults.
+The conceptualization of this study is based on the recognition of the interplay between physical fitness, body composition, and autonomic cardiovascular regulation in aging. We aim to answer the following research question: How does physical fitness relate to body fat percentage and cardiac autonomic response to exercise in older people? By elucidating these correlations, we hope to gain valuable insights into the relationships that underlie age-related modifications in physical fitness and identify potential interventions to enhance health outcomes in older adults. Even more, we seek to understand the moderating effect of frequent psychological traits, such as geriatric depression and anxiety.
 
 <!---- Hypothesis and main objectives ---->
 
-We hypothesize that physical fitness will be inversely related to body fat percentage and positively associated with cardiac autonomic response to exercise in older individuals, based on existing literature and theoretical frameworks. In our opinion, it will be essential for this population to have an optimal cardiac autonomic response, characterized by balanced sympathetic and parasympathetic modulation.
+We hypothesize that physical fitness will be inversely related to body fat percentage and associated with cardiac autonomic response during exercise in older individuals. In our opinion, it will be essential for this population to have an optimal cardiac autonomic response, characterized by a shift towards sympathetic activity predominance.
 
-The primary objective of this study is to investigate the relationship between physical fitness, body fat percentage, and cardiac autonomic response to exercise in older people. We aimed to assess how variations in physical fitness and body composition influence autonomic cardiovascular regulation during low to moderate-intensity exercise, with implications for cardiovascular health and functional capacity in aging. 
+The primary objective of this study is to investigate the relationship between physical fitness, body fat percentage, and cardiac autonomic response to exercise in older people. Even more, We aimed to assess the moderating effect of psychological variables on these relationships, with implications for cardiovascular health and functional capacity in aging. 
 
 # Material and methods
 
 ## Study design
 
-A prospective, cross-sectional and correlational study was conducted on older people in one data collection session, to determine the associations between physical fitness, body composition and cardiac autonomic response to moderate-intensity exercise.
+A prospective observational, cross-sectional study was conducted in older people in one data collection session, to determine the associations between physical fitness, body composition and cardiac autonomic response to moderate-intensity exercise.
 
 ## Participants
 
-XX older adults community-dwelling older adults were recruited and selected by non-probabilistic sampling. They were included if: 60 years age or older; residents of the Region of Magallanes and Chilean Antartica, Chile; and being able to understand the study aims and instructions. But they were excluded in case of: diagnosis of congenital heart disease; consumption of beta-blocker drugs, taking stimulant substances within 24 h before assessments session; motor or cognitive disability; or presence of pain during cardiac or physical assessments. 
+XX community-dwelling older adults were recruited and selected by non-probabilistic sampling, from the Region of Magallanes and Chilean Antartica, Chile. They were included if: 65 years age or older; residents of the Region of Magallanes and Chilean Antartica, Chile; and being able to understand the study aims and instructions. But they were excluded in case of: diagnosis of congenital heart disease; consumption of beta-blocker drugs, taking stimulant substances within 24 h before assessments session; motor or cognitive disability; inability to understand instructions or written content; or presence of pain during cardiac or physical assessments. 
 
 All participating subjects gave their permission and provided informed consent before participation. The Ethics Committee of the University of Magallanes (N°XXX/YY/YEAR) approved this study following the regulations established by the Declaration of Helsinki on ethical principles in human beings.
 
 ## Procedures 
 
-During recruitment,the participants were instructed to avoid the use of psychoactive substances for the 24 hours prior to the assessment, and to sleep for at least 7 hours during the previous night. Upon arrival, participants were informed about the study aims and risks associated with their participation, and the socio-demographic and medical information was collected during the initial interview. Then, Body composition parameters were measured using bioimpedance analysis.
+During recruitment, the participants were instructed to avoid the use of psychoactive substances for the 24 hours prior to the assessment, and to sleep for at least 7 hours during the previous night. Upon arrival, participants were informed about the study aims and risks associated with their participation, and the socio-demographic and medical information was collected during the initial interview. Then, Body composition parameters were measured using bioimpedance analysis, and psychological questionnaires for anxiety and depression screening were applied by a supervised psychology undergraduate student.
 
 Cardiac autonomic response to physical exercise was measured as previously validated for this age group [@ijerph20054456]. The protocol is briefly described below: 
 
@@ -96,7 +97,7 @@ SPPB consists of a physical test used to measure three components of physical fi
 
 Balance: to achieve the maximal score (4 points), the subject should be able to stay balanced for at least 10 seconds in side-by-side stand (feet together), semi-tandem stand and tandem stand.
 
-Usual gait speed: the subjects are asked to walk normally a 4 meters distance. Two chances are given and the best of both is registered. To achieve the maximal score (4 points),they should obtain 4.82 sec. or less.
+Usual gait speed: the subjects are asked to walk normally a 4 meters distance. Two chances are given and the best of both is registered. To achieve the maximal score (4 points), they should obtain 4.82 sec. or less.
 
 Lower body fitness: The subjects are asked to perform 5 chair stands without using their arms and time upon complete is registered. A time lower or equal 11.19 sec. gives the maximal score (4 points).
 
@@ -108,11 +109,20 @@ Body mass (kg) and total body fat (%) were assessed by bioimpedance using the Ta
 
 ### Cardiac autonomic activity
 
-Cardiac autonomic activity was assessed using RR interval recordings obtained through the Polar Team2 system (Polar®) application. Artifacts and ectopic heartbeats, which did not exceed 3% of the recorded data, were excluded [32]. Time-domain parameters considered for analysis included the square root of the mean squared differences of successive RR intervals (RMSSD, expressed in ms) as an index of parasympathetic activity [33], and the standard deviation of RR intervals (SDNN), reflecting total variability encompassing both sympathetic and parasympathetic contributions to cardiac autonomic function [34,35]. Additionally, the Stress Index (SI) and Parasympathetic and Sympathetic Nervous System Index (PNS and SNS, respectively) were calculated. The PNS Index, indicative of total vagal stimulation, was derived from mean R-R intervals, RMSSD, and Poincaré Plot Index SD1 in normalized units (linked to RMSSD), representing deviations from normal population averages [34,39]. The SNS Index, reflecting total sympathetic stimulation, was derived from mean R-R intervals, Baevsky’s Stress Index (positively related to cardiovascular system stress and cardiac sympathetic activity), and the Poincaré Plot Index SD2 in normalized units (related to SDNN) with interpretation similar to the PNS Index [34,39]. The SI serves as an indicator representing the ANS control system's workload [40], normalized by the square root of Baevsky’s SI [41]. All analyses were conducted using Kubios HRV® software (Kuopio, Finland). 
+Cardiac autonomic activity was assessed using RR interval recordings (HRV) obtained through the Polar Team2 system (Polar®) application. Artifacts and ectopic heartbeats, which did not exceed 3% of the recorded data, were excluded [@malik1996heart]. Time-domain parameters considered for analysis included the square root of the mean squared differences of successive RR intervals (RMSSD, expressed in ms) as an index of parasympathetic activity [@pmid:20033207], and the standard deviation of RR intervals (SDNN), reflecting total variability encompassing both sympathetic and parasympathetic contributions to cardiac autonomic function [@pmid:9401419; @buchheit2006cardiac]. Additionally, the Stress Index (SI) and Parasympathetic and Sympathetic Nervous System Index (PNS and SNS, respectively) were calculated. The PNS Index, indicative of total vagal stimulation, was derived from mean R-R intervals, RMSSD, and Poincaré Plot Index SD1 in normalized units (linked to RMSSD), representing deviations from normal population averages [@pmid:9401419; @GSID:XkAQwTGLgNsJ]. The SNS Index, reflecting total sympathetic stimulation, was derived from mean R-R intervals, Baevsky’s Stress Index (positively related to cardiovascular system stress and cardiac sympathetic activity), and the Poincaré Plot Index SD2 in normalized units (related to SDNN) with interpretation similar to the PNS Index [@pmid:9401419; @GSID:XkAQwTGLgNsJ]. The SI serves as an indicator representing the ANS control system's workload [@doi:10.1159/000513781], normalized by the square root of Baevsky’s SI [@2009MethodicalRU]. All analyses were conducted using Kubios HRV® software (Kuopio, Finland).
 
-### Two-minutes step test
+### Two-Minutes Step Test
 
 The TMST is a sub-test from the Senior Fitness Test, demanding a low to moderate intensity [@Rikli1999; @ijerph20054456]. The test consists of a two-minute assessment designed to evaluate cardiorrespiratory fitness. Participants are instructed to raise their right knee to a marked point on a wall as many times as possible within the given time frame, ensuring that each raise reaches at least a 70° angle at the thigh-femoral joint.
+
+### Geriatric Depression Scale
+
+The 30-questions Geriatric Depression Scale (GDS-30) was employed to assess subject's depressivity [@pmid:27633329]. It consists of a 30 dichotomous questionnaire, where participants are asked about their past-week feelings in reference to depressive symptoms (for instance, "Do you feel that your life is empty?"), with higher scores (i. e., "yes" responses) representing more depressive symptoms. It was first developed by Yesavage and colleagues [@pmid:7183759] and is currently widely used [@pmid:34922595]. The spanish version, employed in this study, has been previously validated, with a Cronbach alpha coefficient of 0.82 [@pmid:11921157].
+
+
+### Beck Anxiety Inventory
+
+The Beck anxiety Inventory was employed to assess anxiety symptoms. It consists of a 21-items questionnaire based on usual anxiety symptoms and a 4-options Likert scale from 0 ("Not at all") to 3 ("Severely"), meaning the severity reported by the subject in each one. It was originally developed by Beck and colleagues [@pmid:3204199]. In this study, the spanish version is used, which has demonstrated a high internal consistency in older people (α = 0.94) [@RODRIGUEZREYNALDO2001353].
 
 ## Statistical analysis
 
@@ -140,7 +150,7 @@ readRDS(file = "tables/tbl-descriptives.RDS") |>
 
 ## Body composition and autonomic response
 
-We observed that body fat percentage was linked to a lower SNS (r = -0.252, p = 0.030) and Stress index (r = 0.258, p = 0.027) response during the intervention. However, body fat percentage was positively correlated with time domain HRV during exercise, more specifically RMSSD (r = 0.253, p = 0.029) and SDNN (r = 0.269, p = 0.020).
+We observed that body fat percentage was linked to a lower SNS (r = -0.252, p = 0.030) and Stress index (r = 0.258, p = 0.027) response during the intervention. In addition, body fat percentage was positively correlated with time domain HRV during exercise, more specifically RMSSD (r = 0.253, p = 0.029) and SDNN (r = 0.269, p = 0.020).
 
 <!---
 #> cc_grasa_total_porcentaje, hrv_rmssd_peri, r = 0.253, p = 0.029
@@ -169,7 +179,7 @@ In addition, a greater body fat percentage was negatively correlated with physic
 
 ## Physical fitness and cardiac autonomic response to exercise
 
-Physical fitness was positively correlated with a greater simpathetic activity during exercise, which was reflected by SNS index (r = 0.313, p = 0.006), mean HR (r = 0.355, p = 0.002) and its inverse counterpart mean R-R (r = -0.35, p = 0.002).
+Physical fitness was positively correlated with a greater sympathetic activity during exercise, which was reflected by SNS index (r = 0.313, p = 0.006), mean HR (r = 0.355, p = 0.002) and its inverse counterpart mean R-R (r = -0.35, p = 0.002).
 
 <!--- 
 #> hrv_sns_peri, sppb_total, r = 0.313, p = 0.006
@@ -200,15 +210,25 @@ However, this appears to be accompanied by an proportional decrease in parasympa
 
 # Discussion
 
-[...].
+This study aimed to investigate the relationship between physical fitness, body fat percentage, and cardiac autonomic response to exercise in older people. Through the correlational analysis, we aimed to elucidate the  interplay between these factors and their implications for cardiac autonomic function during physical efforts.
 
-[...].
+It was hypothesized that a higher body fat percentage would be inversely related to  physical aptitude. Our results aligns with this hypothesis and previous research regarding body composition changes and physical performance decrease during aging [@pmid:35832415; @pmid:36256894].
 
-[...].
+Furthermore, the increase in body fat percentage was related to a reduced sympathetic activity response and a higher parasympathetic activity during TMST, as hypothesized (i. e., SNS index, SI, SDNN and RMSSD). Throughout the course of physical efforts, ANS is expected to shift into a sympathetic predominance, ensuring a sufficient response to higher metabolic demands [@pmid:33246163]. However, aged individuals may present an impaired ANS response to physical exercise [@ijerph20054456]. In that sense, our results support that body composition may play a role in that response, opening opportunities for targeted interventions. 
+
+Nonetheless, the moderating effect of physical fitness on the relationship proposed above, suggests that more physically active individuals may counteract the negative effect of a high body fat percentage on cardiac autonomic response to exercise. This result highlights the importance of promoting a physically active lifestyle and favor the maintenance of physical capacity, regardless of nutritional status [@pmid:33402165; @pmid:30002462].
+
+Regarding physical fitness and cardiac autonomic response to exercise, as expected, our results evidenced that individuals with a higher sympathetic activity during exercise, as measured by SNS index, had a greater physical fitness while the opposite observation was made for parasympathetic activity (i. e., PNS index and RMSSD). Previous research had demonstrated the utility of HRV decrease as an index of cardiorespiratory fitness [@pmid:36054204], supporting the hypothesis that a higher sympathetic activity facilitates the performance during physical moderate effort. Even more, it has been previously demonstrated that physically active individuals may have an enhanced autonomic response to exercise, strengthening this relationship [@pmid:28721030; @pmid:24799513].
+
+Our results demonstrate the interplay between physical fitness, body fat, and cardiac autonomic response to exercise in older individuals. Physical fitness is negatively affected by higher body fat percentage , while also being associated with impaired cardiac autonomic response to exercise, characterized by decreased sympathetic activity and increased parasympathetic tone. Additionally, this altered autonomic response is related to lower physical performance in older adults, both variables being important predictors of health outcomes in this population [@pmid:30627571; @pmid:30104034]. Overall, our findings underscore the triangular relationship among these variables.
+
+However, our results did not evidence a moderating effect of GDS-30 and BAI scores, challenging initial hypothesis. This finding suggests a nuanced interplay between psychological variables and physical/physiological measures in older people, underscoring the need for further research to elucidate underlying mechanisms and variables beyond depression and anxiety. While the lack of moderating effects does not diminish the significance of psychological factors in aging, it highlights the complexity of their influence.  
+
+Despite these findings, this study is not without limitations. In first place, our cross-sectional design prevents us from making objective inferences about the direction of the relationships. In second place, a relatively small sample was included, limiting generalizability and statistical power of the analysis. It should also be noted that the relationships between physical fitness and cardiac autonomic response to exercise were not made within the same instrument, due to the possible lack of SPPB to generate an adequate physical stress, and of TMST to inform general physical fitness of the participants. Further research could investigate the impact of cardiac autonomic response on performance during the same task, in this age group. 
 
 # Conclusion
 
-[...]. 
+The results highlighted a triangular relationship between the variables. Body fat percentage was importantly related to both physical fitness and cardiac autonomic activity during exercise, while sympathetic activity was associated with a grater physical fitness in older people. Furthermore, physical fitness may moderate the associations between body fat and cardiac autonomic activity, highlighting its importance in older people's health. However, further research is needed to elucidate moderating effects of psychological variables in this field.
 
 # Author Contributions
 
