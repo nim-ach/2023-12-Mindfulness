@@ -73,7 +73,7 @@ A prospective observational, cross-sectional study was conducted in older people
 
 ## Participants
 
-XX community-dwelling older adults were recruited and selected by non-probabilistic sampling, from the Region of Magallanes and Chilean Antartica, Chile. They were included if: 65 years age or older; residents of the Region of Magallanes and Chilean Antartica, Chile; and being able to understand the study aims and instructions. But they were excluded in case of: diagnosis of congenital heart disease; consumption of beta-blocker drugs, taking stimulant substances within 24 h before assessments session; motor or cognitive disability; inability to understand instructions or written content; or presence of pain during cardiac or physical assessments. 
+XX community-dwelling older adults were recruited and selected by non-probabilistic sampling, from the Region of Magallanes and Chilean Antarctica, Chile. They were included if: 65 years age or older; residents of the Region of Magallanes and Chilean Antarctica, Chile; and being able to understand the study aims and instructions. But they were excluded in case of: diagnosis of congenital heart disease; consumption of beta-blocker drugs, taking stimulant substances within 24 h before assessments session; motor or cognitive disability; inability to understand instructions or written content; or presence of pain during cardiac or physical assessments. 
 
 All participating subjects gave their permission and provided informed consent before participation. The Ethics Committee of the University of Magallanes (N°XXX/YY/YEAR) approved this study following the regulations established by the Declaration of Helsinki on ethical principles in human beings.
 
@@ -113,11 +113,11 @@ Cardiac autonomic activity was assessed using RR interval recordings (HRV) obtai
 
 ### Two-Minutes Step Test
 
-The TMST is a sub-test from the Senior Fitness Test, demanding a low to moderate intensity [@Rikli1999; @ijerph20054456]. The test consists of a two-minute assessment designed to evaluate cardiorrespiratory fitness. Participants are instructed to raise their right knee to a marked point on a wall as many times as possible within the given time frame, ensuring that each raise reaches at least a 70° angle at the thigh-femoral joint.
+The TMST is a sub-test from the Senior Fitness Test, demanding a low to moderate intensity [@Rikli1999; @ijerph20054456]. The test consists of a two-minute assessment designed to evaluate cardiorespiratory fitness. Participants are instructed to raise their right knee to a marked point on a wall as many times as possible within the given time frame, ensuring that each raise reaches at least a 70° angle at the thigh-femoral joint.
 
 ### Geriatric Depression Scale
 
-The 30-questions Geriatric Depression Scale (GDS-30) was employed to assess subject's depressivity [@pmid:27633329]. It consists of a 30 dichotomous questionnaire, where participants are asked about their past-week feelings in reference to depressive symptoms (for instance, "Do you feel that your life is empty?"), with higher scores (i. e., "yes" responses) representing more depressive symptoms. It was first developed by Yesavage and colleagues [@pmid:7183759] and is currently widely used [@pmid:34922595]. The spanish version, employed in this study, has been previously validated, with a Cronbach alpha coefficient of 0.82 [@pmid:11921157].
+The 30-questions Geriatric Depression Scale (GDS-30) was employed to assess subject's depressive symptoms [@pmid:27633329]. It consists of a 30 dichotomous questionnaire, where participants are asked about their past-week feelings in reference to depressive symptoms (for instance, "Do you feel that your life is empty?"), with higher scores (i. e., "yes" responses) representing more depressive symptoms. It was first developed by Yesavage and colleagues [@pmid:7183759] and is currently widely used [@pmid:34922595]. The spanish version, employed in this study, has been previously validated, with a Cronbach alpha coefficient of 0.82 [@pmid:11921157].
 
 
 ### Beck Anxiety Inventory
@@ -126,17 +126,17 @@ The Beck anxiety Inventory was employed to assess anxiety symptoms. It consists 
 
 ## Statistical analysis
 
-We used mean and standard deviation (SD) to describe continuous variables, absolute and relative frequencies to describe discrete variables. In order to assess the realtionship between variables, we used Pearson's product-moment correlation (r), and to assess differences between groups we used standardized mean difference (SMD) and 95% confidence intervals (CI~95%~).
+We used mean and standard deviation (SD) to describe continuous variables, absolute and relative frequencies to describe discrete variables. In order to assess the relationship between variables, we used Pearson's product-moment correlation (r), and to assess differences between groups we used standardized mean difference (SMD) and 95% confidence intervals (CI~95%~).
 
-As a way of controlling for the influence of psycho-physiological variables on the cardiac autonomic response of the subjects to exercise, we assess the average causal mediaton effect (ACME), the average direct effect (ADE) of the main effects after taking into account the effect of moderator variables into the observed relationships and the proportion of the effect that its mediated by these variables. To assess the significance of moderating variables, we used non parametric bootstrapping by using Monte Carlo draws, and bias-corrected and accelerated CI~95%~.
+As a way of controlling for the influence of psycho-physiological variables on the cardiac autonomic response of the subjects to exercise, we assess the average causal mediation effect (ACME), the average direct effect (ADE) of the main effects after taking into account the effect of moderator variables into the observed relationships and the proportion of the effect that its mediated by these variables [@kosuke2010identification]. To assess the significance of moderating variables, we used non parametric bootstrapping by using Monte Carlo resampling, and bias-corrected and accelerated CI~95%~, using the *mediation* R package to this end [@tingley2014mediation].
 
-We defined a type I error rate at 5% ($\alpha$ = 0.05) as our threshold for null hypothesis significance testing. All analyses were computed using the *R* programming language for statistical computing, [@rlanguage].
+We defined a type I error rate at 5% ($\alpha$ = 0.05) as our threshold for null hypothesis significance testing, and non-overlapping CI~95%~ over the null effect for sex differences. All analyses were computed using the *R* programming language for statistical computing, [@rlanguage].
 
 # Results
 
 ## Sample characteristics
 
-The sample assessed consisted on 81 adults (age: 71.1 ± 6.2 years old,  BMI: 31 ± 6.2 kg/m^2^), of whom 67 (82.7%) were females. Sociodemographic and anthropometric characteristics of the sample can be seen in table 1.
+The sample assessed consisted on 81 adults (age: 71.1 ± 6.2 years old, BMI: 31 ± 6.2 kg/m^2^), of whom 67 (82.7%) were females. Sociodemographic and anthropometric characteristics of the sample can be seen in table 1.
 
 ```{r}
 #| echo: false
@@ -207,6 +207,8 @@ However, this appears to be accompanied by an proportional decrease in parasympa
 --->
 
 <!--- Figura 2 --->
+
+## Mediation effects associated with 
 
 # Discussion
 
