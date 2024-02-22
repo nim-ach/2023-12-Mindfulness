@@ -138,8 +138,8 @@ hsps_total
 rm_complete_9
 rm_survey_timestamp_9
 rm_peso
-rm_talla
-rm_imc
+cc_talla
+cc_imc
 cc_imc_categoria
 rm_complete_10
 rm_survey_timestamp_10

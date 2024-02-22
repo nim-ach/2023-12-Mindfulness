@@ -43,7 +43,7 @@ Address: XXXX. Phone: XXXX.
 
 The process of aging is accompanied by a multitude of physiological changes that have the potential to significantly impact people's overall health and well-being [@pmid:30185958; @pmid:31154942]. Body composition and cardiovascular function are particularly relevant, as they are closely associated with the aging process [@pmid:36948782; @pmid:36443946; @pmid:30065258; @pmid:36918543; @pmid:32483625]. In recent times, there has been a growing interest in comprehending the interplay between physical fitness, body composition, and cardiac autonomic response to exercise in older individuals, as these factors play pivotal roles in determining health outcomes within this age group. 
 
-<!---- Antecedentes históricos ---->
+<!---- Historical precedents ---->
 
 Physical fitness has been classically defined as the ability to perform daily tasks with vigor and without undue fatigue, and with ample energy to enjoy leisure-time pursuits and to meet unforeseen emergencies [@pmid:3920716]. Therefor, it is a crucial component of healthy aging. The term encompasses a multitude of aspects, typically including cardiorespiratory endurance, muscular endurance and strength, body composition, and flexibility [@pmid:3920711]. Numerous studies have demonstrated the positive impact of physical fitness on overall health and longevity, highlighting its role in reducing the risk of chronic diseases, and improving quality of life and functional independence in older adults [@pmid:9177581; @pmid:29293447; @pmid:30768197; @pmid:36332759]
 
@@ -53,13 +53,13 @@ Autonomic nervous system (ANS) plays a critical role in regulating cardiovascula
 
 However, HRV is not only influenced by physical and environmental stressors. Psychological factors such as anxiety and depression have also been linked to changes in ANS activity [@doi:10.1016/j.jad.2018.04.071; @pmid:35340102]. Notably, older individuals may be more susceptible to these psychological factors, making it crucial to measure and control for their effects [@pmid:38007499; @pmid:25980510].
 
-<!---- Conceptualización del problema ---->
+<!---- Conceptualization of the issue ---->
 
 Despite extensive research into physical fitness, body composition, and cardiovascular health in older adults, gaps persist in the understanding of their interrelationships and underlying mechanisms. One area of interest is the relationship between physical fitness, body fat percentage, and cardiac autonomic response to exercise in older individuals. Although previous studies have explored these factors independently, this study explore their collective influence on physical fitness in the aging population.
 
 The conceptualization of this study is based on the recognition of the interplay between physical fitness, body composition, and autonomic cardiovascular regulation in aging. We aim to answer the following research question: How does physical fitness relate to body fat percentage and cardiac autonomic response to exercise in older people? By elucidating these correlations, we hope to gain valuable insights into the relationships that underlie age-related modifications in physical fitness and identify potential interventions to enhance health outcomes in older adults. Even more, we seek to understand the moderating effect of frequent psychological traits, such as geriatric depression and anxiety.
 
-<!---- Hipótesis y objetivos ---->
+<!---- Hypothesis and main objectives ---->
 
 We hypothesize that physical fitness will be inversely related to body fat percentage and associated with cardiac autonomic response during exercise in older individuals. In our opinion, it will be essential for this population to have an optimal cardiac autonomic response, characterized by a shift towards sympathetic activity predominance, in order to achieve a grater performance during physical fitness testing.
 
@@ -95,7 +95,7 @@ Physical and Physiological assessments, as well as the initial interview, were m
 
 ## Instruments
 
-### Short Physical Performance Battery
+### Short physical performance battery
 
 SPPB consists of a physical test used to measure three components of physical fitness, described below [@Guralnik1994]:
 
@@ -107,11 +107,11 @@ Lower body fitness: The subjects are asked to perform 5 chair stands without usi
 
 To obtain the final score, the summing of the three components is calculated, with a maximal total score of 12 points.
 
-### Body Composition
+### Body composition
 
 Body mass (kg) and total body fat (%) were assessed by bioimpedance using the Tanita BC-558 Ironman Segmental Body Composition Monitor (Tanita Ironman, Arlington Heights, IL 60005, USA), with a concordance of 89.3% compared to the Dual X-ray Absorption test using standard measurement protocols [@Mialich2011].  
 
-### Cardiac Autonomic Activity
+### Cardiac autonomic activity
 
 Cardiac autonomic activity was assessed using RR interval recordings (HRV) obtained through the Polar Team2 system (Polar®) application. Artifacts and ectopic heartbeats, which did not exceed 3% of the recorded data, were excluded [@malik1996heart]. Time-domain parameters considered for analysis included the square root of the mean squared differences of successive RR intervals (RMSSD, expressed in ms) as an index of parasympathetic activity [@pmid:20033207], and the standard deviation of RR intervals (SDNN), reflecting total variability encompassing both sympathetic and parasympathetic contributions to cardiac autonomic function [@pmid:9401419; @buchheit2006cardiac]. Additionally, the Stress Index (SI) and Parasympathetic and Sympathetic Nervous System Index (PNS and SNS, respectively) were calculated. The PNS Index, indicative of total vagal stimulation, was derived from mean R-R intervals, RMSSD, and Poincaré Plot Index SD1 in normalized units (linked to RMSSD), representing deviations from normal population averages [@pmid:9401419; @GSID:XkAQwTGLgNsJ]. The SNS Index, reflecting total sympathetic stimulation, was derived from mean R-R intervals, Baevsky’s Stress Index (positively related to cardiovascular system stress and cardiac sympathetic activity), and the Poincaré Plot Index SD2 in normalized units (related to SDNN) with interpretation similar to the PNS Index [@pmid:9401419; @GSID:XkAQwTGLgNsJ]. The SI serves as an indicator representing the ANS control system's workload [@doi:10.1159/000513781], normalized by the square root of Baevsky’s SI [@2009MethodicalRU]. All analyses were conducted using Kubios HRV® software (Kuopio, Finland).
 
@@ -130,13 +130,27 @@ The Beck anxiety Inventory was employed to assess anxiety symptoms. It consists 
 
 ## Statistical analysis
 
-[...], using the *R* programming language for statistical computing, [@rlanguage].
+We used mean and standard deviation (SD) to describe continuous variables, absolute and relative frequencies to describe discrete variables. In order to assess the realtionship between variables, we used Pearson's product-moment correlation (r), and to assess differences between groups we used standardized mean difference (SMD) and 95% confidence intervals (CI~95%~).
+
+As a way of controlling for the influence of psycho-physiological variables on the cardiac autonomic response of the subjects to exercise, we assess the average causal mediaton effect (ACME), the average direct effect (ADE) of the main effects after taking into account the effect of moderator variables into the observed relationships and the proportion of the effect that its mediated by these variables. To assess the significance of moderating variables, we used non parametric bootstrapping by using Monte Carlo draws, and bias-corrected and accelerated CI~95%~.
+
+We defined a type I error rate at 5% ($\alpha$ = 0.05) as our threshold for null hypothesis significance testing. All analyses were computed using the *R* programming language for statistical computing, [@rlanguage].
 
 # Results
 
 ## Sample characteristics
 
-Sociodemographic characteristic of the sample can be seen in table 1.
+The sample assessed consisted on 81 adults (age: 71.1 ± 6.2 years old,  BMI: 31 ± 6.2 kg/m^2^), of whom 67 (82.7%) were females. Sociodemographic and anthropometric characteristics of the sample can be seen in table 1.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(flextable)
+readRDS(file = "tables/tbl-descriptives.RDS") |> 
+  font(part = "all", fontname = "Times")
+```
+
 
 ## Body composition and autonomic response
 
