@@ -154,7 +154,7 @@ load("../../data/mindfulness.RData")
 ```
 
 
-```{r tbl-1}
+```{r}
 #| echo: false
 #| message: false
 #| warning: false
