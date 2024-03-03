@@ -115,9 +115,11 @@ Body mass (kg) and total body fat (%) were assessed by bioimpedance using the Ta
 
 Cardiac autonomic activity was assessed using RR interval recordings (HRV) obtained through the Polar Team2 system (Polar®) application. Artifacts and ectopic heartbeats, which did not exceed 3% of the recorded data, were excluded [@malik1996heart]. Time-domain parameters considered for analysis included the square root of the mean squared differences of successive RR intervals (RMSSD, expressed in ms) as an index of parasympathetic activity [@pmid:20033207], and the standard deviation of RR intervals (SDNN), reflecting total variability encompassing both sympathetic and parasympathetic contributions to cardiac autonomic function [@pmid:9401419; @buchheit2006cardiac]. Additionally, the Stress Index (SI) and Parasympathetic and Sympathetic Nervous System Index (PNS and SNS, respectively) were calculated. The PNS Index, indicative of total vagal stimulation, was derived from mean R-R intervals, RMSSD, and Poincaré Plot Index SD1 in normalized units (linked to RMSSD), representing deviations from normal population averages [@pmid:9401419; @GSID:XkAQwTGLgNsJ]. The SNS Index, reflecting total sympathetic stimulation, was derived from mean R-R intervals, Baevsky’s Stress Index (positively related to cardiovascular system stress and cardiac sympathetic activity), and the Poincaré Plot Index SD2 in normalized units (related to SDNN) with interpretation similar to the PNS Index [@pmid:9401419; @GSID:XkAQwTGLgNsJ]. The SI serves as an indicator representing the ANS control system's workload [@doi:10.1159/000513781], normalized by the square root of Baevsky’s SI [@2009MethodicalRU]. All analyses were conducted using Kubios HRV® software (Kuopio, Finland).
 
-### Two-Minutes Step Test
+<!--- ESTA VARIABLE NO ES MENCIONADA EN LOS RESULTADOS, ES CUESTIONABLE SU MENCIÓN EN EL PAPER --->
+### Two-Minutes Step Test **RECONSIDERAR ESTA VARIABLE**
 
 The TMST is a sub-test from the Senior Fitness Test, demanding a low to moderate intensity [@Rikli1999; @ijerph20054456]. The test consists of a two-minute assessment designed to evaluate cardiorespiratory fitness. Participants are instructed to raise their right knee to a marked point on a wall as many times as possible within the given time frame, ensuring that each raise reaches at least a 70° angle at the thigh-femoral joint.
+<!--- ESTA VARIABLE NO ES MENCIONADA EN LOS RESULTADOS, ES CUESTIONABLE SU MENCIÓN EN EL PAPER --->
 
 ### Geriatric Depression Scale
 
@@ -142,15 +144,24 @@ We defined a type I error rate at 5% ($\alpha$ = 0.05) as our threshold for null
 
 The sample assessed consisted on 81 adults (age: 71.1 ± 6.2 years old, BMI: 31 ± 6.2 kg/m^2^), of whom 67 (82.7%) were females. Sociodemographic and anthropometric characteristics of the sample can be seen in table 1.
 
-```{r}
-#| echo: false
+```{r prep-env}
+#| include: false
 #| message: false
 #| warning: false
 library(flextable)
+library(data.table)
+load("../../data/mindfulness.RData")
+```
+
+
+```{r tbl-1}
+#| echo: false
+#| message: false
+#| warning: false
 readRDS(file = "tables/tbl-descriptives.RDS") |> 
   font(part = "all", fontname = "Times")
 ```
-
+**Table 1**. Main sample characteristics. Body composition and sociodemograpic variables are displayed for the overall sample and aggregated by sex. Differences between males and females are displayed as SMD and CI~95%~ for continuous variables.
 
 ## Body composition and autonomic response
 
@@ -170,11 +181,14 @@ We observed that body fat percentage was linked to a lower SNS (r = -0.252, p = 
 #> cc_grasa_total_porcentaje, hrv_sdnn_peri, rho = 0.284, p = 0.014
 --->
 
+![](figures/fig-1.jpeg)
+**Figure 1**. Main correlations among psychological, cardiac autonomic and performance variables. Non-significant correlations (i.e., p > 0.05) were crossed with and "X". The more intense the color the stronger the correlation, either positive or negative.
+
 <!--- Figura con cuatro mostrando las correlaciones --->
 
 ## Body composition and physical fitness
 
-In addition, a greater body fat percentage was negatively correlated with physical fitness (r = -0.273, p = 0.015). 
+In addition, a greater body fat percentage was negatively correlated with the SPPB total score (r = -0.273, p = 0.015), menawhile, no other metrics of body composition were associated with physical performance of the SPPB (i.e., p > 0.05). 
 
 <!---
 #> cc_grasa_total_porcentaje, sppb_total, r = -0.273, p = 0.015
@@ -183,7 +197,7 @@ In addition, a greater body fat percentage was negatively correlated with physic
 
 ## Physical fitness and cardiac autonomic response to exercise
 
-Physical fitness was positively correlated with a greater sympathetic activity during exercise, which was reflected by SNS index (r = 0.313, p = 0.006), mean HR (r = 0.355, p = 0.002) and its inverse counterpart mean R-R (r = -0.35, p = 0.002).
+Physical fitness, reflected through SPPB total score, was positively correlated with a greater sympathetic activity during exercise, which was reflected by SNS index (r = 0.313, p = 0.006), mean HR (r = 0.355, p = 0.002) and its inverse counterpart mean R-R (r = -0.35, p = 0.002).
 
 <!--- 
 #> hrv_sns_peri, sppb_total, r = 0.313, p = 0.006
@@ -212,7 +226,9 @@ However, this appears to be accompanied by an proportional decrease in parasympa
 
 <!--- Figura 2 --->
 
-## Mediation effects associated with 
+## Mediation
+
+[Pendiente]
 
 # Discussion
 
