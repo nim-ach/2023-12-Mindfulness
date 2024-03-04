@@ -63,7 +63,7 @@ cor_1 <- correlation(
     id_event_name == "Basal", 
     j = .SD, 
     .SDcols = grepl(
-      pattern = "^cc|^cv|^hrv|total$", 
+      pattern = "^cc|^cv|^hrv|total$|tm_pasos", 
       x = names(mindfulness)
     )
   ],
