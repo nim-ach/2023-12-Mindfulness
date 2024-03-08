@@ -171,8 +171,7 @@ We observed that body fat percentage was linked to a lower SNS (r = -0.252, p = 
 
 ## Body composition and physical fitness
 
-In addition, greater SPPB score was observed in leaner (r = -0.273, p = 0.015) and individuals with lower BMI values (r = -0.225, p = 0.047). Similar findings were observed between total steps from the TMST and body fat percentage (r = -0.279, p = 0.013) and bodyweight (r = -0.232, p = 0.041). Not enough evidence was observed to suggest a correlation between total muscle mass with either total SPPB score (r = -0.063, p = 0.584) or total number of steps in TMST (r = -0.070, p = 0.541). 
-
+In addition, greater SPPB score was observed in leaner (r = -0.273, p = 0.015) and individuals with lower BMI values (r = -0.225, p = 0.047). Similar findings were observed between total steps from the TMST and body fat percentage (r = -0.279, p = 0.013) and bodyweight (r = -0.232, p = 0.041). Not enough evidence was observed to suggest a correlation between total muscle mass with either total SPPB score (r = -0.063, p = 0.584) or total number of steps in TMST (r = -0.070, p = 0.541).
 
 ## Physical fitness and cardiac autonomic response to exercise
 
@@ -205,7 +204,7 @@ Our results provide evidence to support the interplay between physical fitness, 
 
 However, our results did not evidence a moderating effect of either GDS-30 or BAI scores, challenging our initial hypothesis. These finding suggests a nuanced interplay between psychological variables and physical/physiological measures in older people, underscoring the need for further research to elucidate underlying mechanisms and variables beyond depression and anxiety. While the lack of evidence suggesting any moderating effects does not diminish the significance of psychological factors in aging, it highlights the complexity of their influence.
 
-In addition to the potential strengths of this cross-sectional study, it is not without limitations. First, our study design prevents us from making causal inferences about the direction of the relationships, highlighting the relevance of experimental and longitudinal research exploring causal relations between our variables and potential underlying mechanisms. Second, a relatively small sample was included, limiting generalizability and statistical power of the analysis. Furthermore, the sample consisted mainly of women (82.7%), limiting our ability to make sex comparisons and decreasing the representativeness of the sample. It should also be noted that the relationships between physical fitness and cardiac autonomic response to exercise were not made within the same instrument, due to the possible lack of SPPB to generate an adequate physical stress, and of TMST to inform general physical fitness of the participants. Further research could investigate the impact of cardiac autonomic response on performance during the same task, in this age group. 
+In addition to the potential strengths of this cross-sectional study, it is not without limitations. First, our study design prevents us from making causal inferences about the direction of the relationships, highlighting the relevance of experimental and longitudinal research exploring causal relations between our variables and potential underlying mechanisms. Second, a relatively small sample was included, limiting generalizability and statistical power of the analysis. Furthermore, the sample consisted mainly of women (82.7%), limiting our ability to make sex comparisons and decreasing the representativeness of the sample. Further research could investigate the impact of cardiac autonomic response on performance during the same task, in this age group. 
 
 # Conclusion
 
