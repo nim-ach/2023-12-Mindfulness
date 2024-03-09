@@ -148,7 +148,9 @@ The sample assessed consisted on 81 adults (age: 71.1 ± 6.2 years old, BMI: 31 
 #| warning: false
 library(flextable)
 library(data.table)
+library(ggplot2)
 load("../../data/mindfulness.RData")
+dat <- mindfulness[id_event_name == "Basal", -2L]
 ```
 
 
@@ -163,21 +165,170 @@ readRDS(file = "tables/tbl-descriptives.RDS") |>
 
 ## Body composition and autonomic response
 
-We observed that body fat percentage was linked to a lower SNS (r = -0.252, p = 0.030) and Stress index (r = 0.258, p = 0.027) response during the TSMT. In addition, body fat percentage was positively correlated with time domain HRV during exercise, more specifically RMSSD (r = 0.253, p = 0.029) and SDNN (r = 0.269, p = 0.020). No other body composition variables were found to influence the cardiac autonomic response to exercise.
+We observed that body fat percentage was linked to a lower SNS (r = -0.252, p = 0.030) and Stress index (r = -0.258, p = 0.027) response during the TSMT. In addition, body fat percentage was positively correlated with time domain HRV during exercise, more specifically RMSSD (r = 0.253, p = 0.029) and SDNN (r = 0.269, p = 0.020). No other body composition variables were found to influence the cardiac autonomic response to exercise.
+
+```{r}
+#| echo: false
+#| warning: false
+#| error: false
+#| fig-width: 8
+#| fig-height: 4
+#| fig-dpi: 300
+dat_long <- melt.data.table(
+  data = dat,
+  id.vars = c("id_record", "cc_grasa_total_porcentaje"), 
+  measure.vars = c("hrv_sns_peri", "hrv_stress_peri", "hrv_rmssd_peri", "hrv_sdnn_peri", "hrv_pns_peri")
+)
+
+dat_long[, variable := fcase(
+  grepl("sns", variable), "SNS index",
+  grepl("pns", variable), "PNS index",
+  grepl("stress", variable), "Stress index",
+  grepl("sdnn", variable), "SDNN",
+  grepl("rmssd", variable), "RMSSD"
+)]
+
+dat_long[, variable := factor(variable, levels = c("RMSSD", "SDNN", "PNS index", "SNS index", "Stress index"))]
+
+ggplot(dat_long, aes(value, cc_grasa_total_porcentaje)) +
+  facet_grid(~ variable, scales = "free_x") +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  geom_text(mapping = aes(label = text), data = data.frame(
+    variable = as.factor(c("RMSSD", "SDNN", "PNS index", "SNS index", "Stress index")),
+    cc_grasa_total_porcentaje = c(61, 61, 61, 61, 61),
+    value = c(13, 20, -2, 8, 45),
+    text = c("p = 0.029", "p = 0.020", "p = 0.262", "p = 0.030", "p = 0.026")
+  ), size = 3.5, fontface = "italic") +
+  labs(y = "Body fat (%)", x = "Values") +
+  tidybayes::theme_ggdist()
+```
 
 
-![](figures/fig-1.jpeg)
-**Figure 1**. Main correlations among psychological, cardiac autonomic and performance variables. Non-significant correlations (i.e., p > 0.05) were crossed with and "X". The more intense the color the stronger the correlation, either positive or negative. GDS, Geriatric Depression Scale; BAI, Beck Anxiety Inventory; SPPB, Short Physical Performance Battery; TMST, Two-Minutes Step Test; BMI, Body Mass Index.
+**Figure 1**. Bivariate dispersion plots between body fat and HRV related measures. Significance values for the Pearson's product-moment correlation test is shown.
 
 ## Body composition and physical fitness
 
 In addition, greater SPPB score was observed in leaner (r = -0.273, p = 0.015) and individuals with lower BMI values (r = -0.225, p = 0.047). Similar findings were observed between total steps from the TMST and body fat percentage (r = -0.279, p = 0.013) and bodyweight (r = -0.232, p = 0.041). Not enough evidence was observed to suggest a correlation between total muscle mass with either total SPPB score (r = -0.063, p = 0.584) or total number of steps in TMST (r = -0.070, p = 0.541).
+
+```{r}
+#| echo: false
+#| warning: false
+#| error: false
+#| fig-width: 8
+#| fig-height: 4
+#| fig-dpi: 300
+dat_long <- melt.data.table(
+  data = dat,
+  id.vars = c("id_record", "cc_grasa_total_porcentaje", "cc_masa_muscular_total"), 
+  measure.vars = c("tm_pasos", "sppb_total")
+)
+
+dat_long[, variable := fcase(
+  grepl("tm_pasos", variable), "TMST steps",
+  grepl("sppb_total", variable), "SPPB total score"
+)]
+
+dat_long[, variable := factor(variable, levels = c("TMST steps", "SPPB total score"))]
+
+fig2a <- ggplot(dat_long, aes(value, cc_grasa_total_porcentaje)) +
+  facet_grid(~ variable, scales = "free_x") +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  geom_text(mapping = aes(label = text), data = data.frame(
+    variable = as.factor(c("TMST steps", "SPPB total score")),
+    cc_grasa_total_porcentaje = c(60, 60),
+    value = c(42, 4),
+    text = c("p = 0.013", "p = 0.015")
+  ), size = 3.5, fontface = "italic") +
+  labs(y = "Body fat (%)", x = NULL) +
+  scale_y_continuous(expand = c(.1,.1)) +
+  tidybayes::theme_ggdist()
+
+fig2b <- ggplot(dat_long, aes(value, cc_masa_muscular_total)) +
+  facet_grid(~ variable, scales = "free_x") +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  geom_text(mapping = aes(label = text), data = data.frame(
+    variable = as.factor(c("TMST steps", "SPPB total score")),
+    cc_masa_muscular_total = c(65.5, 65.5),
+    value = c(42, 4),
+    text = c("p = 0.541", "p = 0.584")
+  ), size = 3.5, fontface = "italic") +
+  labs(y = "Muscle mass (kg)", x = NULL) +
+  scale_y_continuous(expand = c(.1,.1)) +
+  tidybayes::theme_ggdist()
+
+ggpubr::ggarrange(
+  fig2a, fig2b, nrow = 1
+)
+```
+**Figure 2**. Bivariate dispersion plots between physical fitness and body composition related measures. Significance values for the Pearson's product-moment correlation test is shown.
 
 ## Physical fitness and cardiac autonomic response to exercise
 
 Physical fitness, reflected through SPPB total score and total steps in TMST, was positively correlated with a greater sympathetic activity during exercise, which was reflected by SNS index (SPPB score, r = 0.313, p = 0.006; TMST steps, r = 0.265, p = 0.022), mean HR (SPPB score, r = 0.355, p = 0.002; TMST steps, r = 0.338, p = 0.003) and its inverse counterpart mean R-R (SPPB score, r = -0.35, p = 0.002; TMST steps, r = -0.311, p = 0.007). Total number of steps from TMST was also inversely correlated with parasympathetic indices during exercise like RMSSD (r = -0.285, p = 0.014) and PNS index (r = -0.344, p = 0.003).
 
 However, this appears to be accompanied by an proportional decrease in parasympathetic drive during exercise with increasing levels of physical fitness displayed in the SPPB, which was denoted by the inverse correlation of the later with PNS index during (r = -0.375, p = 0.001) and after exercise (r = -0.229, p = 0.049), in addition to RMSSD during exercise (r = -0.294, p = 0.010)
+
+```{r}
+#| echo: false
+#| warning: false
+#| error: false
+#| fig-width: 8
+#| fig-height: 8
+#| fig-dpi: 300
+dat_long <- melt.data.table(
+  data = dat,
+  id.vars = c("id_record", "tm_pasos", "sppb_total"), 
+  measure.vars = c("hrv_sns_peri", "hrv_stress_peri", "hrv_rmssd_peri", "hrv_sdnn_peri", "hrv_pns_peri")
+)
+
+dat_long[, variable := fcase(
+  grepl("sns", variable), "SNS index",
+  grepl("pns", variable), "PNS index",
+  grepl("stress", variable), "Stress index",
+  grepl("sdnn", variable), "SDNN",
+  grepl("rmssd", variable), "RMSSD"
+)]
+
+dat_long[, variable := factor(variable, levels = c("RMSSD", "SDNN", "PNS index", "SNS index", "Stress index"))]
+
+fig3a <- ggplot(dat_long, aes(value, tm_pasos)) +
+  facet_grid(~ variable, scales = "free_x") +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  geom_text(mapping = aes(label = text), data = data.frame(
+    variable = as.factor(c("RMSSD", "SDNN", "PNS index", "SNS index", "Stress index")),
+    tm_pasos = c(125, 125, 125, 125, 125),
+    value = c(13, 20, -2, 8, 45),
+    text = c("p = 0.014", "p = 0.141", "p = 0.002", "p = 0.022", "p = 0.261")
+  ), size = 3.5, fontface = "italic") +
+  labs(y = "TMST steps", x = NULL) +
+  scale_y_continuous(expand = c(.1,.1)) +
+  tidybayes::theme_ggdist() +
+  theme(axis.line.x = element_blank(), axis.ticks.x = element_blank(), 
+        axis.text.x = element_blank())
+
+fig3b <- ggplot(dat_long, aes(value, sppb_total)) +
+  facet_grid(~ variable, scales = "free_x") +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  geom_text(mapping = aes(label = text), data = data.frame(
+    variable = as.factor(c("RMSSD", "SDNN", "PNS index", "SNS index", "Stress index")),
+    sppb_total = c(14, 14, 14, 14, 14),
+    value = c(13, 20, -2, 8, 45),
+    text = c("p = 0.010", "p = 0.419", "p < 0.001", "p = 0.006", "p = 0.095")
+  ), size = 3.5, fontface = "italic") +
+  labs(y = "SPPB score", x = "Values") +
+  scale_y_continuous(expand = c(.1,.1)) +
+  tidybayes::theme_ggdist()
+
+ggpubr::ggarrange(
+  fig3a, fig3b, ncol = 1
+)
+```
+**Figure 3**. Bivariate dispersion plots between physical fitness and HRV related measures. Significance values for the Pearson's product-moment correlation test is shown.
 
 ## Mediation analysis
 
@@ -190,11 +341,8 @@ Similar mediation effects of total muscle mass were observed (ACME = 0.118, CI~9
 
 Main results are represented in the Figure X.
 
-Fig. X. Diagram of main results.
-
-****Insertar Figura resumen resultados****
-
-Footnote: The figure represents the main results of this study. Blue arrows and boxes represent the correlation between variables, while orange arrows and boxes represent the factors mediating the above correlations. "+" means that the mediating factor enhances the main observed effect, contrary to "-", reflecting a diminished main effect when considering the mediating factor.
+![](figures/fig_esquema.jpg)
+**Figure 4**. Diagram of main results observed form the data. Blue arrows and boxes represent the correlation between variables, while orange arrows and boxes represent the factors mediating the above correlations. "+" means that the mediating factor enhances the main observed effect, contrary to "-", reflecting a diminished main effect when considering the mediating factor.
 
 
 
