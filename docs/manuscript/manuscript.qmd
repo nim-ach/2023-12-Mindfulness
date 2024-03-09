@@ -339,12 +339,8 @@ Additionally, and in the case on sympathetic indicators, the effect of body fat 
 When assessing potential mediators for the effect of body composition on fitness related measures, we found that the effect of body fat percentage on SPPB score (ADE = -0.075, CI~95%~[-0.123, -0.020], p = 0.007) is partially diminished when considering the influence of total muscle mass (ACME = 0.011, CI~95%~[0, 0.040], p = 0.107; Total effect = -0.064, CI~95%~[-0.111, -0.010], p = 0.014). 
 Similar mediation effects of total muscle mass were observed (ACME = 0.118, CI~95%~[0.005, 0.350], p = 0.075) when assessing the effect of body fat percentage on TMST steps (ADE = -0.773, CI~95%~[-1.193, -0.300], p = 0.001; Total effect = -0.655, CI~95%~[-1.084, -0.210], p = 0.004). No other mediating effects were observed for any of the psychological measures for any of the relationships between body composition and physical fitness measures.
 
-Main results are represented in the Figure X.
-
 ![](figures/fig_esquema.jpg)
 **Figure 4**. Diagram of main results observed form the data. Blue arrows and boxes represent the correlation between variables, while orange arrows and boxes represent the factors mediating the above correlations. "+" means that the mediating factor enhances the main observed effect, contrary to "-", reflecting a diminished main effect when considering the mediating factor.
-
-
 
 # Discussion
 
