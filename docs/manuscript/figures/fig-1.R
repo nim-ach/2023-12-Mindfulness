@@ -30,7 +30,7 @@ fig <- ggplot(dat_long, aes(value, cc_grasa_total_porcentaje)) +
     variable = as.factor(c("RMSSD", "SDNN", "PNS index", "SNS index", "Stress index")),
     cc_grasa_total_porcentaje = c(61, 61, 61, 61, 61),
     value = c(13, 20, -2, 8, 45),
-    text = c("p = 0.029", "p = 0.020", "p = 0.262", "p = 0.030", "p = 0.026")
+    text = c("p = 0.029\nr = 0.253", "p = 0.020\nr = 0.269", "p = 0.262\nr = 0.132", "p = 0.030\nr = -0.252", "p = 0.026\nr = -0.258")
   ), size = 3.5, fontface = "italic") +
   labs(y = "Body fat (%)", x = "Values") +
   tidybayes::theme_ggdist()

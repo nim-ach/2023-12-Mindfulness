@@ -286,6 +286,10 @@ mindfulness[id_record == 36 & id_event_name == "2-meses", hrv_vlf_peri := NA]
 ### No extreme outliers with z-scores greater than 6 beyond this point
 rm(ind, cols, rows, z_score, std_vars, outliers)
 
+
+### Fixing age typo-error
+mindfulness[sd_edad < 60, sd_edad := sd_edad + 10]
+
 # Data export -------------------------------------------------------------
 
 save(mindfulness, file = "data/mindfulness.RData")

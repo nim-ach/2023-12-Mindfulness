@@ -77,7 +77,7 @@ This study was conducted at the Centro Asistencial Docente e Investigación (Ass
 
 ## Participants
 
-81 community-dwelling older adults were recruited and selected by non-probabilistic sampling, from the Region of Magallanes and Chilean Antartica, Chile. They were included if: 65 years age or older; residents of the Region of Magallanes and Chilean Antarctica, Chile; and being able to understand the study aims and instructions. But they were excluded in case of: diagnosis of congenital heart disease; consumption of beta-blocker drugs, taking stimulant substances within 24 h before assessments session; motor or cognitive disability; inability to understand instructions or written content; or presence of pain during cardiac or physical assessments. 
+81 community-dwelling older adults were recruited and selected by non-probabilistic sampling, from the Region of Magallanes and Chilean Antartica, Chile. They were included if: 55 years age or older; residents of the Region of Magallanes and Chilean Antarctica, Chile; and being able to understand the study aims and instructions. But they were excluded in case of: diagnosis of congenital heart disease; consumption of beta-blocker drugs, taking stimulant substances within 24 h before assessments session; motor or cognitive disability; inability to understand instructions or written content; or presence of pain during cardiac or physical assessments. 
 
 All participating subjects gave their permission and provided informed consent before participation. The Ethics Committee of the University of Magallanes (N°XXX/YY/YEAR) approved this study following the regulations established by the Declaration of Helsinki on ethical principles in human beings.
 
@@ -220,7 +220,7 @@ In addition, greater SPPB score was observed in leaner (r = -0.273, p = 0.015) a
 #| fig-dpi: 300
 dat_long <- melt.data.table(
   data = dat,
-  id.vars = c("id_record", "cc_grasa_total_porcentaje", "cc_masa_muscular_total"), 
+  id.vars = c("id_record", "cc_grasa_total_porcentaje", "cc_masa_muscular_total", "sd_sexo"), 
   measure.vars = c("tm_pasos", "sppb_total")
 )
 
@@ -233,13 +233,13 @@ dat_long[, variable := factor(variable, levels = c("TMST steps", "SPPB total sco
 
 fig2a <- ggplot(dat_long, aes(value, cc_grasa_total_porcentaje)) +
   facet_grid(~ variable, scales = "free_x") +
-  geom_point() +
+  geom_point(aes(col = sd_sexo)) +
   geom_smooth(method = "lm") +
   geom_text(mapping = aes(label = text), data = data.frame(
     variable = as.factor(c("TMST steps", "SPPB total score")),
     cc_grasa_total_porcentaje = c(60, 60),
     value = c(42, 4),
-    text = c("p = 0.013", "p = 0.015")
+    text = c("p = 0.013\nr = -0.279", "p = 0.015\nr = -0.273")
   ), size = 3.5, fontface = "italic") +
   labs(y = "Body fat (%)", x = NULL) +
   scale_y_continuous(expand = c(.1,.1)) +
@@ -253,7 +253,7 @@ fig2b <- ggplot(dat_long, aes(value, cc_masa_muscular_total)) +
     variable = as.factor(c("TMST steps", "SPPB total score")),
     cc_masa_muscular_total = c(65.5, 65.5),
     value = c(42, 4),
-    text = c("p = 0.541", "p = 0.584")
+    text = c("p = 0.541\nr = -0.070", "p = 0.584\nr = -0.063")
   ), size = 3.5, fontface = "italic") +
   labs(y = "Muscle mass (kg)", x = NULL) +
   scale_y_continuous(expand = c(.1,.1)) +
@@ -280,7 +280,7 @@ However, this appears to be accompanied by an proportional decrease in parasympa
 #| fig-dpi: 300
 dat_long <- melt.data.table(
   data = dat,
-  id.vars = c("id_record", "tm_pasos", "sppb_total"), 
+  id.vars = c("id_record", "tm_pasos", "sppb_total", "sd_sexo"), 
   measure.vars = c("hrv_sns_peri", "hrv_stress_peri", "hrv_rmssd_peri", "hrv_sdnn_peri", "hrv_pns_peri")
 )
 
@@ -296,13 +296,13 @@ dat_long[, variable := factor(variable, levels = c("RMSSD", "SDNN", "PNS index",
 
 fig3a <- ggplot(dat_long, aes(value, tm_pasos)) +
   facet_grid(~ variable, scales = "free_x") +
-  geom_point() +
+  geom_point(aes(col = sd_sexo)) +
   geom_smooth(method = "lm") +
   geom_text(mapping = aes(label = text), data = data.frame(
     variable = as.factor(c("RMSSD", "SDNN", "PNS index", "SNS index", "Stress index")),
     tm_pasos = c(125, 125, 125, 125, 125),
     value = c(13, 20, -2, 8, 45),
-    text = c("p = 0.014", "p = 0.141", "p = 0.002", "p = 0.022", "p = 0.261")
+    text = c("p = 0.014\nr = -0.285", "p = 0.141\nr = -0.173", "p = 0.002\nr = -0.344", "p = 0.022\nr = 0.265", "p = 0.261\nr = 0.132")
   ), size = 3.5, fontface = "italic") +
   labs(y = "TMST steps", x = NULL) +
   scale_y_continuous(expand = c(.1,.1)) +
@@ -312,13 +312,13 @@ fig3a <- ggplot(dat_long, aes(value, tm_pasos)) +
 
 fig3b <- ggplot(dat_long, aes(value, sppb_total)) +
   facet_grid(~ variable, scales = "free_x") +
-  geom_point() +
+  geom_point(aes(col = sd_sexo)) +
   geom_smooth(method = "lm") +
   geom_text(mapping = aes(label = text), data = data.frame(
     variable = as.factor(c("RMSSD", "SDNN", "PNS index", "SNS index", "Stress index")),
     sppb_total = c(14, 14, 14, 14, 14),
     value = c(13, 20, -2, 8, 45),
-    text = c("p = 0.010", "p = 0.419", "p < 0.001", "p = 0.006", "p = 0.095")
+    text = c("p = 0.010\nr = -0.294", "p = 0.419\nr = -0.095", "p < 0.001\nr = -0.375", "p = 0.006\nr = 0.313", "p = 0.095\nr = 0.194")
   ), size = 3.5, fontface = "italic") +
   labs(y = "SPPB score", x = "Values") +
   scale_y_continuous(expand = c(.1,.1)) +

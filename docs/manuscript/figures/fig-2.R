@@ -27,7 +27,7 @@ fig2a <- ggplot(dat_long, aes(value, cc_grasa_total_porcentaje)) +
     variable = as.factor(c("TMST steps", "SPPB total score")),
     cc_grasa_total_porcentaje = c(60, 60),
     value = c(42, 4),
-    text = c("p = 0.013", "p = 0.015")
+    text = c("p = 0.013\nr = -0.279", "p = 0.015\nr = -0.273")
   ), size = 3.5, fontface = "italic") +
   labs(y = "Body fat (%)", x = NULL) +
   scale_y_continuous(expand = c(.1,.1)) +
@@ -41,7 +41,7 @@ fig2b <- ggplot(dat_long, aes(value, cc_masa_muscular_total)) +
     variable = as.factor(c("TMST steps", "SPPB total score")),
     cc_masa_muscular_total = c(65.5, 65.5),
     value = c(42, 4),
-    text = c("p = 0.541", "p = 0.584")
+    text = c("p = 0.541\nr = -0.070", "p = 0.584\nr = -0.063")
   ), size = 3.5, fontface = "italic") +
   labs(y = "Muscle mass (kg)", x = NULL) +
   scale_y_continuous(expand = c(.1,.1)) +
