@@ -1,0 +1,881 @@
+---
+title: "Adressing reviewers comments"
+format: pdf
+editor_options: 
+  chunk_output_type: console
+execute: 
+  eval: false
+---
+
+
+```{r}
+## Load packages
+library(data.table)
+
+## Load data
+load("data/mindfulness.RData")
+
+## Filtering study data
+dat <- mindfulness[id_event_name == "Basal", -2L]
+
+## Add equilibrium category 
+dat[, sppb_equil_cat := sppb_equil_bip + sppb_equil_semitandem + sppb_equil_tandem]
+```
+
+
+## To-do
+
+- [x] "Run separate correlations on an only female sample and add to the manuscript to identify exactly how males influence the results".
+- [x] "The correlations for each individual SPPB assessment results (i.e., time of 4-meter walk, time of repeated chair rise, etc.) should be reported".
+
+# Body composition and autonomic response
+
+## Result 1: more body fat percentage was linked to a lower SNS response to TSMT
+
+```{r}
+## Combined data
+dat[, cor.test(cc_grasa_total_porcentaje, hrv_sns_peri) |> 
+      with({
+        paste0("r = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(cc_grasa_total_porcentaje, hrv_sns_peri) |> 
+      with({
+        paste0("r = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: r = -0.252, p = 0.030 \*
+- Males: r = 0.174, p = 0.589
+- Females: r = -0.356, p = 0.005 \*\*
+
+## Result 2: more body fat percentage was linked to a lower SI response to TSMT
+
+```{r}
+## Combined data
+dat[, cor.test(cc_grasa_total_porcentaje, hrv_stress_peri) |> 
+      with({
+        paste0("r = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(cc_grasa_total_porcentaje, hrv_stress_peri) |> 
+      with({
+        paste0("r = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: r = -0.258, p = 0.027 \*
+- Males: r = 0.204, p = 0.525
+- Females: r = -0.316, p = 0.012 \*
+
+## Result 3: body fat percentage was positively correlated with RMSSD during exercise
+
+```{r}
+## Combined data
+dat[, cor.test(cc_grasa_total_porcentaje, hrv_rmssd_peri) |> 
+      with({
+        paste0("r = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(cc_grasa_total_porcentaje, hrv_rmssd_peri) |> 
+      with({
+        paste0("r = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: r = 0.253, p = 0.029 \*
+- Males: r = -0.259, p = 0.416
+- Females: r = 0.246, p = 0.054 \.
+
+## Result 4: body fat percentage was positively correlated with SDNN during exercise
+
+```{r}
+## Combined data
+dat[, cor.test(cc_grasa_total_porcentaje, hrv_sdnn_peri) |> 
+      with({
+        paste0("r = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(cc_grasa_total_porcentaje, hrv_sdnn_peri) |> 
+      with({
+        paste0("r = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: r = 0.269, p = 0.020 \*
+- Males: r = -0.058, p = 0.859
+- Females: r = 0.247, p = 0.053 \.
+
+
+# Body composition and physical fitness
+
+## Results 1: greater SPPB score witb lower body fat
+
+Note: Using Spearman's rho as the constituents of the SPPB domains are ordinal (levels from 1 to 4) and body fat percentage is continuous.
+
+#### sppb_equil_cat
+
+```{r}
+## Combined data
+dat[, cor.test(cc_grasa_total_porcentaje, sppb_equil_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(cc_grasa_total_porcentaje, sppb_equil_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: rho = 0.052, p = 0.656
+- Males: rho = 0.044, p = 0.893
+- Females: rho = 0.017, p = 0.896
+
+#### sppb_sts_cat
+
+```{r}
+## Combined data
+dat[, cor.test(cc_grasa_total_porcentaje, sppb_sts_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(cc_grasa_total_porcentaje, sppb_sts_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: rho = -0.279, p = 0.013 \*
+- Males: rho = -0.304, p = 0.337
+- Females: rho = -0.347, p = 0.004 \*\*
+
+#### sppb_velocidad_cat
+
+```{r}
+## Combined data
+dat[, cor.test(cc_grasa_total_porcentaje, sppb_velocidad_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(cc_grasa_total_porcentaje, sppb_velocidad_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: rho = -0.261, p = 0.021 \*
+- Males: rho = 0.172, p = 0.593
+- Females: rho = -0.309, p = 0.012 \*
+
+## Results 2: greater SPPB score with lower BMI
+
+Note: Using Spearman's rho as the constituents of the SPPB domains are ordinal (levels from 1 to 4) and BMI is continuous.
+
+#### sppb_equil_cat
+
+```{r}
+## Combined data
+dat[, cor.test(cc_imc, sppb_equil_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(cc_imc, sppb_equil_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: rho = -0.083, p = 0.474
+- Males: rho = 0.1, p = 0.77
+- Females: rho = -0.109, p = 0.39
+
+#### sppb_sts_cat
+
+```{r}
+## Combined data
+dat[, cor.test(cc_imc, sppb_sts_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(cc_imc, sppb_sts_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: rho = -0.325, p = 0.004 \*\*
+- Males: rho = -0.294, p = 0.38
+- Females: rho = -0.324, p = 0.008 \*\*
+
+#### sppb_velocidad_cat
+
+```{r}
+## Combined data
+dat[, cor.test(cc_imc, sppb_velocidad_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(cc_imc, sppb_velocidad_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: rho = -0.305, p = 0.007 \*\*
+- Males: rho = -0.108, p = 0.752
+- Females: rho = -0.318, p = 0.009 \*\*
+
+
+## Results 3: greater TMST steps with lower body fat percentage
+
+```{r}
+## Combined data
+dat[, cor.test(cc_grasa_total_porcentaje, tm_pasos) |> 
+      with({
+        paste0("r = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(cc_grasa_total_porcentaje, tm_pasos) |> 
+      with({
+        paste0("r = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: r = -0.279, p = 0.013
+- Males: r = 0.085, p = 0.792
+- Females: r = -0.311, p = 0.01
+
+## Results 4: greater TMST steps with lower bodyweight
+
+```{r}
+## Combined data
+dat[, cor.test(cc_peso_corporal, tm_pasos) |> 
+      with({
+        paste0("r = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(cc_peso_corporal, tm_pasos) |> 
+      with({
+        paste0("r = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: r = -0.232, p = 0.041 \*
+- Males: r = -0.198, p = 0.559
+- Females: r = -0.275, p = 0.024 \*
+
+## Results 4: greater TMST steps with lower body fat
+
+```{r}
+## Combined data
+dat[, cor.test(cc_grasa_total_porcentaje, tm_pasos) |> 
+      with({
+        paste0("r = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(cc_grasa_total_porcentaje, tm_pasos) |> 
+      with({
+        paste0("r = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: r = -0.279, p = 0.013 \*
+- Males: r = 0.085, p = 0.792
+- Females: r = -0.311, p = 0.01 \*\*
+
+## Null result 6: Total SPPB and total muscle mass
+
+Note: Using Spearman's rho as the constituents of the SPPB domains are ordinal (levels from 1 to 4) and total muscle mass is continuous.
+
+#### sppb_equil_cat
+
+```{r}
+## Combined data
+dat[, cor.test(cc_masa_muscular_total, sppb_equil_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(cc_masa_muscular_total, sppb_equil_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: rho = 0.016, p = 0.888
+- Males: rho = 0.044, p = 0.893
+- Females: rho = 0.049, p = 0.699
+
+#### sppb_sts_cat
+
+```{r}
+## Combined data
+dat[, cor.test(cc_masa_muscular_total, sppb_sts_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(cc_masa_muscular_total, sppb_sts_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: rho = -0.255, p = 0.024 \*
+- Males: rho = -0.126, p = 0.697
+- Females: rho = -0.327, p = 0.007 \*\*
+
+#### sppb_velocidad_cat
+
+```{r}
+## Combined data
+dat[, cor.test(cc_masa_muscular_total, sppb_velocidad_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(cc_masa_muscular_total, sppb_velocidad_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: rho = -0.136, p = 0.236
+- Males: rho = 0.215, p = 0.502
+- Females: rho = -0.254, p = 0.039 \*
+
+## Null result 7: Total number of steps in TMST and total muscle mass
+
+```{r}
+## Combined data
+dat[, cor.test(cc_masa_muscular_total, tm_pasos) |> 
+      with({
+        paste0("r = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(cc_masa_muscular_total, tm_pasos) |> 
+      with({
+        paste0("r = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: r = -0.07, p = 0.541
+- Males: r = -0.258, p = 0.418
+- Females: r = -0.237, p = 0.054 \.
+
+
+
+# Physical fitness and cardiac autonomic response to exercise
+
+However, this appears to be accompanied by a proportional decrease in the parasympathetic drive during exercise with increasing levels of physical fitness displayed in the SPPB, which was denoted by the latter's inverse correlation with the PNS index during (r = -0.375, p = 0.001) and after exercise (r = -0.229, p = 0.049), in addition to RMSSD during exercise (r = -0.294, p = 0.010). See Figure 4.
+
+
+## Results 1: Greater SPPB with greater SNS index peri
+
+Note: Using Spearman's rho as the constituents of the SPPB domains are ordinal (levels from 1 to 4) and SNS index is continuous.
+
+#### sppb_equil_cat
+
+```{r}
+## Combined data
+dat[, cor.test(hrv_sns_peri, sppb_equil_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(hrv_sns_peri, sppb_equil_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: rho = 0.082, p = 0.492
+- Males: rho = 0, p = 1
+- Females: rho = 0.121, p = 0.356
+
+#### sppb_sts_cat
+
+```{r}
+## Combined data
+dat[, cor.test(hrv_sns_peri, sppb_sts_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(hrv_sns_peri, sppb_sts_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: rho = 0.345, p = 0.003 \*\*
+- Males: rho = 0.607, p = 0.028 \*
+- Females: rho = 0.294, p = 0.021 \*
+
+#### sppb_velocidad_cat
+
+```{r}
+## Combined data
+dat[, cor.test(hrv_sns_peri, sppb_velocidad_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(hrv_sns_peri, sppb_velocidad_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: rho = 0.098, p = 0.407
+- Males: rho = -0.137, p = 0.654
+- Females: rho = 0.124, p = 0.341
+
+## Results 2: Greater TMST steps with greater SNS index peri
+
+```{r}
+## Combined data
+dat[, cor.test(hrv_sns_peri, tm_pasos) |> 
+      with({
+        paste0("r = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(hrv_sns_peri, tm_pasos) |> 
+      with({
+        paste0("r = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: r = 0.265, p = 0.022 \*
+- Males: r = -0.211, p = 0.51
+- Females: r = 0.326, p = 0.01 \*
+
+## Results 3: Greater SPPB with greater mean HR peri
+
+Note: Using Spearman's rho as the constituents of the SPPB domains are ordinal (levels from 1 to 4) and mean HR is continuous.
+
+#### sppb_equil_cat
+
+```{r}
+## Combined data
+dat[, cor.test(hrv_mean_hr_peri, sppb_equil_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(hrv_mean_hr_peri, sppb_equil_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: rho = 0.128, p = 0.28
+- Males: rho = 0, p = 1
+- Females: rho = 0.143, p = 0.276
+
+#### sppb_sts_cat
+
+```{r}
+## Combined data
+dat[, cor.test(hrv_mean_hr_peri, sppb_sts_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(hrv_mean_hr_peri, sppb_sts_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: rho = 0.387, p = 0.001 \*\*
+- Males: rho = 0.558, p = 0.047 \*
+- Females: rho = 0.334, p = 0.009 \*\*
+
+#### sppb_velocidad_cat
+
+```{r}
+## Combined data
+dat[, cor.test(hrv_mean_hr_peri, sppb_velocidad_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(hrv_mean_hr_peri, sppb_velocidad_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: rho = 0.123, p = 0.297
+- Males: rho = -0.212, p = 0.486
+- Females: rho = 0.213, p = 0.100
+
+## Results 4: Greater TMST steps with greater mean HR peri
+
+```{r}
+## Combined data
+dat[, cor.test(hrv_mean_hr_peri, tm_pasos) |> 
+      with({
+        paste0("r = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(hrv_mean_hr_peri, tm_pasos) |> 
+      with({
+        paste0("r = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: r = 0.338, p = 0.003 \*\*
+- Males: r = -0.17, p = 0.598
+- Females: r = 0.414, p = 0.001 \*\*
+
+## Results 5: Greater SPPB with less mean R-R interval peri
+
+Note: Using Spearman's rho as the constituents of the SPPB domains are ordinal (levels from 1 to 4) and mean R-R interval is continuous.
+
+#### sppb_equil_cat
+
+```{r}
+## Combined data
+dat[, cor.test(hrv_mean_rr_peri, sppb_equil_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(hrv_mean_rr_peri, sppb_equil_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: rho = -0.125, p = 0.291
+- Males: rho = 0, p = 1
+- Females: rho = -0.141, p = 0.284
+
+#### sppb_sts_cat
+
+```{r}
+## Combined data
+dat[, cor.test(hrv_mean_rr_peri, sppb_sts_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(hrv_mean_rr_peri, sppb_sts_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: rho = -0.394, p = 0.001 \*\*
+- Males: rho = -0.558, p = 0.047 \*
+- Females: rho = -0.338, p = 0.008 \*\*
+
+#### sppb_velocidad_cat
+
+```{r}
+## Combined data
+dat[, cor.test(hrv_mean_rr_peri, sppb_velocidad_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(hrv_mean_rr_peri, sppb_velocidad_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: rho = -0.125, p = 0.29
+- Males: rho = 0.256, p = 0.398
+- Females: rho = -0.214, p = 0.098
+
+## Results 6: Greater TMST steps with less mean R-R interval peri
+
+```{r}
+## Combined data
+dat[, cor.test(hrv_mean_rr_peri, tm_pasos) |> 
+      with({
+        paste0("r = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(hrv_mean_rr_peri, tm_pasos) |> 
+      with({
+        paste0("r = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: r = -0.311, p = 0.007 \*\*
+- Males: r = 0.16, p = 0.62
+- Females: r = -0.398, p = 0.001 \*\*
+
+## Results 7: Greater TMST with less RMSSD peri
+
+```{r}
+## Combined data
+dat[, cor.test(hrv_rmssd_peri, tm_pasos) |> 
+      with({
+        paste0("r = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(hrv_rmssd_peri, tm_pasos) |> 
+      with({
+        paste0("r = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: r = -0.285, p = 0.014 \*
+- Males: r = -0.08, p = 0.805
+- Females: r = -0.288, p = 0.023 \*
+
+## Results 8: Greater TMST with less PNS index peri
+
+```{r}
+## Combined data
+dat[, cor.test(hrv_pns_peri, tm_pasos) |> 
+      with({
+        paste0("r = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(hrv_pns_peri, tm_pasos) |> 
+      with({
+        paste0("r = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: r = -0.344, p = 0.003 \*\*
+- Males: r = 0.115, p = 0.722
+- Females: r = -0.41, p = 0.001 \*\*
+
+## Results 9: Greater SPPB with less PNS index peri
+
+Note: Using Spearman's rho as the constituents of the SPPB domains are ordinal (levels from 1 to 4) and PNS index is continuous.
+
+#### sppb_equil_cat
+
+```{r}
+## Combined data
+dat[, cor.test(hrv_pns_peri, sppb_equil_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(hrv_pns_peri, sppb_equil_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: rho = -0.109, p = 0.36
+- Males: rho = 0.077, p = 0.802
+- Females: rho = -0.154, p = 0.24
+
+#### sppb_sts_cat
+
+```{r}
+## Combined data
+dat[, cor.test(hrv_pns_peri, sppb_sts_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(hrv_pns_peri, sppb_sts_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: rho = -0.407, p < 0.001 \*\*\*
+- Males: rho = -0.518, p = 0.07
+- Females: rho = -0.363, p = 0.004 \*\*
+
+#### sppb_velocidad_cat
+
+```{r}
+## Combined data
+dat[, cor.test(hrv_pns_peri, sppb_velocidad_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(hrv_pns_peri, sppb_velocidad_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: rho = -0.108, p = 0.362
+- Males: rho = 0.216, p = 0.48
+- Females: rho = -0.179, p = 0.168
+
+## Results 10: Greater SPPB with less PNS index post index is continuous
+
+Note: Using Spearman's rho as the constituents of the SPPB domains are ordinal (levels from 1 to 4) and PNS index is continuous.
+
+#### sppb_equil_cat
+
+```{r}
+## Combined data
+dat[, cor.test(hrv_pns_post, sppb_equil_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(hrv_pns_post, sppb_equil_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: rho = -0.226, p = 0.054
+- Males: rho = -0.077, p = 0.802
+- Females: rho = -0.259, p = 0.046 \*
+
+#### sppb_sts_cat
+
+```{r}
+## Combined data
+dat[, cor.test(hrv_pns_post, sppb_sts_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(hrv_pns_post, sppb_sts_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: rho = -0.165, p = 0.161
+- Males: rho = -0.57, p = 0.042 \*
+- Females: rho = -0.087, p = 0.506
+
+#### sppb_velocidad_cat
+
+```{r}
+## Combined data
+dat[, cor.test(hrv_pns_post, sppb_velocidad_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(hrv_pns_post, sppb_velocidad_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: rho = -0.107, p = 0.365
+- Males: rho = 0.007, p = 0.981
+- Females: rho = -0.135, p = 0.299
+
+## Results 11: Greater SPPB with less RMSSD peri
+
+Note: Using Spearman's rho as the constituents of the SPPB domains are ordinal (levels from 1 to 4) and RMSSD is continuous.
+
+#### sppb_equil_cat
+
+```{r}
+## Combined data
+dat[, cor.test(hrv_rmssd_peri, sppb_equil_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(hrv_rmssd_peri, sppb_equil_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: rho = -0.085, p = 0.476
+- Males: rho = 0.155, p = 0.614
+- Females: rho = -0.179, p = 0.171
+
+#### sppb_sts_cat
+
+```{r}
+## Combined data
+dat[, cor.test(hrv_rmssd_peri, sppb_sts_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(hrv_rmssd_peri, sppb_sts_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: rho = -0.327, p = 0.005 \*\*
+- Males: rho = -0.419, p = 0.154
+- Females: rho = -0.333, p = 0.009 \*\*
+
+#### sppb_velocidad_cat
+
+```{r}
+## Combined data
+dat[, cor.test(hrv_rmssd_peri, sppb_velocidad_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      })]
+## Separate analysis
+dat[j = cor.test(hrv_rmssd_peri, sppb_velocidad_cat, method = "spearman", exact = F) |> 
+      with({
+        paste0("rho = ", round(estimate,3), ", p = ", round(p.value,3))
+      }), 
+    by = sd_sexo]
+```
+
+- Combined data: rho = -0.051, p = 0.669
+- Males: rho = 0.283, p = 0.349
+- Females: rho = -0.104, p = 0.426
+
+
+

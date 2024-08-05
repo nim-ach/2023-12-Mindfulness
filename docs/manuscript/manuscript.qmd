@@ -8,88 +8,100 @@ format:
 ---
 **Title**: Physical Fitness is Related to Body Fat and Heart Rate Variability during Exercise in Community-Dwelling Older People: a cross-sectional study.
 
-**Authors**: Autor,^1^ Autor,^2^ Autor,^3^ Autor,^4^ Autor,^5^ Autor.^6^ \*
+**Authors**: Diego Mabe-Castro^1,2^, Matías Castillo-Aguilar^1^, Matías Mabe-Castro^1,3^, Ruby Méndez Muñoz^1^, Carla Basualto-Alarcón^4,5^, Cristian Núñez-Espinosa^1,3,6^.
 
 ::: {custom-style="Afiliation"}
-^1^ Affiliation, location.
+^1^ Centro Asistencial Docente e Investigación, Universidad de Magallanes, Punta Arenas, Chile
 
-^2^ Affiliation, location.
+^2^ Departamento de Kinesiología, Universidad de Magallanes, Punta Arenas, Chile
 
-^3^ Affiliation, location.
+^3^ Escuela de Medicina. Universidad de Magallanes, Punta Arenas, Chile
 
-^4^ Affiliation, location.
+^4^ Laboratory of Cellular Physiology and Metabolism; Centro PUENTES de Investigación en Salud; Health Sciences Department, University of Aysén, Coyhaique, Chile
 
-^5^ Affiliation, location.
+^5^ Anatomy and Legal Medicine Department, Faculty of Medicine, University of Chile, Santiago, Chile.
 
-^6^ Affiliation, location.
+^6^ Interuniversity Center for Healthy Aging
 :::
 
-### \*Corresponding author 
+::: {custom-style="Afiliation"}
+Corresponding Author:
 
-Autor, Affiliation, location. e-mail: autor\@mail.com. 
-Address: XXXX. Phone: XXXX.
+Cristian Núñez-Espinosa
+
+Avenida Bulnes 01855, Box 113-D, Punta Arenas, Región de Magallanes y la Antártica Chilena, Chile
+
+Email address: Cristian.nunez\@umag.cl
+:::
 
 \newpage
 
 ## Abstract 
 
-**Background**: Physical fitness, body composition, and the autonomic response to exercise are important predictors of health-related outcomes in older adults, but their interplay is not fully understood, therefore, this study aims to assess the associations between these variables and possible mediating effects. **Methods**: an observational cross-sectional study was conducted in 81 community-dwelling older people, recruited by non-probabilistic sampling. To obtain body composition parameters, a bio-impedance analysis was made, then, the Short Physical Performance Battery (SPPB) was used to assess physical fitness, and the Heart Rate Variability (HRV) was recorded before, during and after the Two-Minute Step Test (TMST), to assess cardiac autonomic response to physical exercise. Geriatric depression and anxiety symptoms were assessed as secondary measures. Correlation and mediating effects analyses were carried out. **Results**: SPPB score was negatively related to body fat percentage (r = -0.273, p = 0.015), but positively related to SNS index during exercise (r = 0.313, p = 0.006). Also, a negative link existed between body fat and sympathetic activity: SNS index (r = -0.252, p = 0.030) and Stress index (r = 0.258, p = 0.027) during TMST. But a positive link with parasympathetic activity: RMSSD (r = 0.253, p = 0.029) and SDNN (r = 0.269, p = 0.020) **Conclusion**: Body fat was inversely correlated to both physical fitness and cardiac autonomic activity during exercise, with sympathetic drive associated with physical fitness in older people. Furthermore, physical fitness may mediate the effect of body fat on cardiac autonomic activity during exercise, and total muscle mass may mitigate the negative effect of increased adiposity on physical fitness, highlighting its pivotal role in older people's health. However, further research is needed to elucidate mediating effects of psychological variables in this field.
+**Background**. Age-related changes in body composition affect physical fitness in older adults. However, whether the autonomic response is associated with body fat percentage and its implication for physical fitness is not fully understood.
 
-**Keywords**: Aged, Physical Functional Performance, Exercise Test, Body Composition, Autonomic Nervous System
+**Aim**. To understand the association between physical fitness, body composition, and heart rate variability in older people and its mediating factors.
+
+**Methods**. A cross-sectional study with 81 older adults was conducted, assessing Short Physical Performance Battery (SPPB), Two-minute Step Test (TMST), body composition, and cardiac autonomic response. Correlation and mediation analyses were performed. 
+
+**Results**. Body fat percentage negatively correlated with physical fitness (SPPB: r = -0.273, p = 0.015; TMST: r = -0.279, p = 0.013) and sympathetic activity (SNS index: r = -0.252, p = 0.030), yet positively correlated with parasympathetic tone (RMSSD: r = 0.253, p = 0.029; SDNN: r = 0.269, p = 0.020). Physical fitness associated with sympathetic nervous system index (SPPB: r = 0.313, p = 0.006; TMST: r = 0.265, p = 0.022) and parasympathetic nervous system index (TMST: r = -0.344, p = 0.003). Muscle mass mediated body fat's impact on physical fitness, while physical fitness mediated body fat's impact on autonomic response. 
+
+**Conclusion**. Body composition and cardiac autonomic response to exercise are associated with physical fitness in older people, highlighting a possible protective effect of muscle mass against the decline in physical fitness associated with increased body fat.
 
 \newpage
 
 # Introduction
 
-The process of aging is accompanied by a multitude of physiological changes that have the potential to significantly impact people's overall health and well-being [@pmid:30185958; @pmid:31154942]. Body composition and cardiovascular function are particularly relevant, as they are closely associated with the aging process [@pmid:36948782; @pmid:36443946; @pmid:30065258; @pmid:36918543; @pmid:32483625]. In recent times, there has been a growing interest in comprehending the interplay between physical fitness, body composition, and cardiac autonomic response to exercise in older individuals, as these factors play pivotal roles in determining health outcomes within this age group. 
+Aging is accompanied by a multitude of physiological changes that have the potential to significantly impact people's overall health and well-being [@pmid:30185958; @pmid:31154942]. Body composition and cardiovascular function are particularly relevant, as they are closely associated with aging [@pmid:36948782; @pmid:36443946; @pmid:30065258; @pmid:36918543; @pmid:32483625]. Recently, there has been a growing interest in comprehending the interplay between physical fitness, body composition, and cardiac autonomic response to exercise in older individuals, as these factors play pivotal roles in determining health outcomes within this age group. 
 
 <!---- Historical precedents ---->
 
-Physical fitness has been classically defined as the ability to perform daily tasks with vigor and without undue fatigue, and with ample energy to enjoy leisure-time pursuits and to meet unforeseen emergencies [@pmid:3920716]. Therefore, it is a crucial component of healthy aging. The term encompasses a multitude of aspects, typically including cardiorespiratory endurance, muscular endurance and strength, body composition, and flexibility [@pmid:3920711]. Numerous studies have demonstrated the positive impact of physical fitness on overall health and longevity, emphasizing its role in reducing the risk of chronic diseases, and improving quality of life and functional independence in older adults [@pmid:9177581; @pmid:29293447; @pmid:30768197; @pmid:36332759]
+Physical fitness is the ability to perform daily tasks with vigor, without undue fatigue, and with ample energy to enjoy leisure-time pursuits and meet unforeseen emergencies [@pmid:3920716]. Therefore, it is a crucial component of healthy aging. The term encompasses many aspects, including cardiorespiratory endurance, muscular endurance and strength, body composition, and flexibility [@pmid:3920711]. Numerous studies have demonstrated the positive impact of physical fitness on overall health and longevity, emphasizing its role in reducing the risk of chronic diseases and improving quality of life and functional independence in older adults [@pmid:9177581; @pmid:29293447; @pmid:30768197; @pmid:36332759]
 
 Moreover, the alteration of body composition, specifically the proportion of body fat, is accompanied by significant changes with age, resulting in a tendency towards an increase in adiposity and a decrease in lean muscle mass [@pmid:35968789; @pmid:33673927]. Excessive body fat accumulation, particularly visceral adiposity, has been associated with a higher risk of cardiovascular disease, metabolic disorders, and functional limitations in older individuals [@pmid:31301983; @pmid:33882682].
 
-Autonomic nervous system (ANS) plays a critical role in regulating cardiovascular function, with sympathetic and parasympathetic branches exerting opposing effects on heart rate and vascular tone. Furthermore, during stressful situations, such as physical exercise, the ANS ensures a sufficient cardiac response to higher metabolic demands [@pmid:16627049].  The measurement of heart rate variability (HRV), serves as a non-invasive indicator of ANS activity and cardiovascular health [@pmid:37641564; @pmid:29033120]. A reduction in rest HRV has been linked to various adverse outcomes, including cardiovascular events and morbidity, while insufficient HRV reduction during exercise may lead to impaired physical capacity [@pmid:29033120; @pmid:33390146; @pmid:36054204]. 
+The autonomic nervous system (ANS) plays a critical role in regulating cardiovascular function, with sympathetic and parasympathetic branches exerting opposing effects on heart rate and vascular tone. Furthermore, during stressful situations, such as physical exercise, the ANS ensures a sufficient cardiac response to higher metabolic demands [@pmid:16627049]. Heart rate variability (HRV) is a non-invasive indicator of ANS activity and cardiovascular health [@pmid:37641564; @pmid:29033120]. A reduction in resting HRV has been linked to various adverse outcomes, including cardiovascular events and morbidity, while insufficient HRV reduction during exercise may lead to impaired physical capacity [@pmid:29033120; @pmid:33390146; @pmid:36054204]. 
 
-However, HRV is not only influenced by physical and environmental stressors. Psychological factors such as anxiety and depression have also been linked to changes in ANS activity [@doi:10.1016/j.jad.2018.04.071; @pmid:35340102]. Notably, older individuals may be more susceptible to these psychological factors, making it crucial to measure and control for their effects [@pmid:38007499; @pmid:25980510].
+However, HRV is not only influenced by physical and environmental stressors. Psychological factors such as anxiety and depression have also been linked to changes in ANS activity [@doi:10.1016/j.jad.2018.04.071; @pmid:35340102]. Older individuals may be more susceptible to these psychological factors, making it crucial to measure and control for their effects [@pmid:38007499; @pmid:25980510].
 
 <!---- Conceptualization of the issue ---->
 
-Despite extensive research into physical fitness, body composition, and cardiovascular health in older adults, gaps persist in the understanding of their interrelationships and factors mediating them. One area of interest is the relationship between physical fitness, body fat percentage, and cardiac autonomic response to exercise in older individuals. This study explores their collective influence on physical fitness in the aging population.
 
-The conceptualization of this investigation is based on the recognition of the interplay between physical fitness, body composition, and autonomic cardiovascular regulation in aging. We aim to answer the following research question: How does physical fitness relate to body fat percentage and cardiac autonomic response to exercise in older people? By elucidating these correlations, we hope to gain valuable insights into the relationships that underlie age-related modifications in physical fitness and identify potential interventions to enhance health outcomes in older adults. Even more, we seek to understand the mediating effect of the variables, including frequent psychological traits, such as geriatric depression and anxiety.
+Despite extensive research into physical fitness, body composition, and cardiovascular health in older adults, gaps persist in understanding their interrelationships and the factors mediating them. One area of interest is the relationship between physical fitness, body fat percentage, and cardiac autonomic response to exercise in older individuals. This study explores their collective influence on physical fitness in the aging population.
+
+The conceptualization of this investigation is based on recognizing the interplay between physical fitness, body composition, and autonomic cardiovascular regulation in aging. We aim to answer the following research question: How does physical fitness relate to body fat percentage and cardiac autonomic responses to exercise in older people? By elucidating these correlations, we hope to gain valuable insights into the relationships that underlie age-related modifications in physical fitness and identify potential interventions to enhance health outcomes in older adults. Even more, we seek to understand the mediating effect of the variables, including physical aspects and frequent psychological traits, such as geriatric depression and anxiety.
 
 <!---- Hypothesis and main objectives ---->
 
-We hypothesize that physical fitness will be inversely related to body fat percentage and associated with cardiac autonomic response during exercise in older individuals. In our opinion, it will be essential for this population to have an optimal cardiac autonomic response, characterized by a shift towards sympathetic activity predominance, in order to achieve a grater performance during physical fitness testing.
-
-The primary objective of this study is to investigate the relationship between physical fitness, body fat percentage, and cardiac autonomic response to exercise in older people. Even more, We aimed to assess the mediating effect of psychological variables on these relationships, with implications for cardiovascular health and functional capacity in aging. 
+We hypothesized that physical fitness would be inversely related to body fat percentage and associated with cardiac autonomic response during exercise in older individuals. We believe an optimal cardiac autonomic response, characterized by a shift towards sympathetic activity predominance, will be essential for this population to achieve greater performance during physical fitness testing.
 
 # Methods
 
 ## Aims and Study design
 
-A prospective observational, cross-sectional study was conducted  in one data collection session, to determine the associations between physical fitness, body composition and cardiac autonomic response to moderate-intensity exercise.
+A prospective observational, cross-sectional study was conducted in one data collection session to determine the associations between physical fitness, body composition, and cardiac autonomic response to moderate-intensity exercise. 
 
 ## Setting
 
-This study was conducted at the Centro Asistencial Docente e Investigación (Assistance, Teaching, and Research Center), belonging to the University of Magallanes (CADI-UMAG), in the city of Punta Arenas, Chile. All the assessments were made between 09:00 and 11:00 hours of the morning. The privacy and comfort of the subjects was ensured, the room temperature was set at 20°C and a white artificial lighting was used.
+This study was conducted at the Centro Asistencial Docente e Investigación (Assistance, Teaching, and Research Center), which belongs to the University of Magallanes (CADI-UMAG) in Punta Arenas, Chile. All the assessments were made between 09:00 and 11:00 a.m. The privacy and comfort of the subjects were ensured; the room temperature was set at 20°C, and white artificial lighting was used.
 
 ## Participants
 
-81 community-dwelling older adults were recruited and selected by non-probabilistic sampling, from the Region of Magallanes and Chilean Antartica, Chile. They were included if: 55 years age or older; residents of the Region of Magallanes and Chilean Antarctica, Chile; and being able to understand the study aims and instructions. But they were excluded in case of: diagnosis of congenital heart disease; consumption of beta-blocker drugs, taking stimulant substances within 24 h before assessments session; motor or cognitive disability; inability to understand instructions or written content; or presence of pain during cardiac or physical assessments. 
+81 community-dwelling older adults were recruited and selected by non-probabilistic sampling from the Region of Magallanes and Chilean Antarctica, Chile. If they were 60 years or older, residents of the Region of Magallanes and Chilean Antarctica, Chile, they were included and understood the study aims and instructions. However, they were excluded in the case of diagnosis of congenital heart disease, consumption of beta-blocker drugs, taking stimulant substances within 24 h before assessment session, motor or cognitive disability, inability to understand instructions or written content, or presence of pain during cardiac or physical assessments.
 
-All participating subjects gave their permission and provided informed consent before participation. The Ethics Committee of the University of Magallanes (N°XXX/YY/YEAR) approved this study following the regulations established by the Declaration of Helsinki on ethical principles in human beings.
+All participants gave their permission and provided informed written consent before participation. The Ethics Committee of the University of Magallanes (N°10/CEC-UMAG/2023) approved this study, following the regulations established by the Declaration of Helsinki on ethical principles in human beings.
+The flow diagram of the included participants can be seen in Figure 1.
+
 
 ## Procedures 
 
-During recruitment, the participants were instructed to avoid the use of psychoactive substances for the 24 hours prior to the assessment, and to sleep for at least 7 hours during the previous night. Upon arrival, participants were informed about the study aims and risks associated with their participation, and the socio-demographic and medical information was collected during the initial interview. Then, Body composition parameters were measured using bioimpedance analysis, and psychological questionnaires for anxiety and depression screening were applied by a supervised psychology undergraduate student.
+During recruitment, the participants were instructed to avoid the use of psychoactive substances for 24 hours before the assessment and to sleep for at least 7 hours the previous night. Upon arrival, participants were informed about the study aims and risks associated with their participation, and sociodemographic and medical information was collected during the initial interview. Then, Body composition parameters were measured using bioimpedance analysis, and psychological questionnaires for anxiety and depression screening were applied by a supervised psychology undergraduate student.
 
-Cardiac autonomic response to physical exercise was measured as previously validated for this age group [@ijerph20054456]. The protocol is briefly described below: 
+Cardiac autonomic response to physical exercise was measured as previously validated for this age group [@ijerph20054456]. The protocol is briefly described below:
 
-HRV was recorded through a non-invasive chest band, immediately before, during, and immediately after the execution of the two-minutes step test (TMST). Vital signs, including blood pressure, were monitored throughout the test, and participants' well-being was visually checked to ensure they were comfortable and prepared. For resting HRV measurements (before and after the application of the TMST), the volunteers remained seated in a chair, with feet and back supported, ensuring avoiding to talk during the recordings. R-R intervals were recorded continuously during the last 10 min of rest, and were subsequently analyzed for 5 min in each occasion. The breathing rate was spontaneous. As part of the protocol, it was ensured that the participant needed to have a blood pressure less than 140/90 mmHg to start the HRV measurements.
+HRV was recorded through a non-invasive chest band immediately before, during, and after executing the two-minute step test (TMST). Vital signs, including blood pressure, were monitored throughout the test, and participants’ well-being was visually checked to ensure they were comfortable and prepared. For resting HRV measurements (before and after the application of the TMST), the volunteers remained seated in a chair, with feet and back supported, ensuring avoidance of talking during the recordings. R-R intervals were recorded continuously during the last 10 min of rest and were analyzed for 5 min on each occasion. The breathing rate was spontaneous. As part of the protocol, it was ensured that the participant had a blood pressure of less than 140/90 mmHg to start the HRV measurements.
 
-Finally, after 15 minutes of resting from the TMST, the Short Physical Performance Battery (SPPB) was applied to the participants. Blood pressure, heart rate and general aspect of the subjects was verified before ending the session. 
+Finally, after 15 minutes of resting from the TMST, the Short Physical Performance Battery (SPPB) was administered to the participants. Before the session ended, the subjects ' blood pressure, heart rate, and general appearance were verified.
 
 Physical and physiological assessments, as well as the initial interview, were made by professional physiotherapists.
 
@@ -99,13 +111,13 @@ Physical and physiological assessments, as well as the initial interview, were m
 
 SPPB consists of a physical test used to measure three components of physical fitness, described below [@Guralnik1994]:
 
-Balance: to achieve the maximal score (4 points), the subject should be able to stay balanced for at least 10 seconds in side-by-side stand (feet together), semi-tandem stand and tandem stand.
+Balance: to achieve the maximal score (4 points), the subject should be able to stay balanced for at least 10 seconds in a side-by-side stand (feet together), semi-tandem stand, and tandem stand.
 
-Usual gait speed: the subjects are asked to walk normally a 4 meters distance. Two chances are given and the best of both is registered. To achieve the maximal score (4 points), they should obtain 4.82 sec. or less.
+Usual gait speed: The subjects are asked to walk normally at a 4-meter distance. They are given two chances, and the best of both is registered. To achieve the maximal score (4 points), they should obtain 4.82 sec. or less.
 
-Lower body fitness: The subjects are asked to perform 5 chair stands without using their arms and time upon complete is registered. A time lower or equal 11.19 sec. gives the maximal score (4 points).
+Lower body fitness: The subjects are asked to perform five chair stands without using their arms, and time is registered upon completion. A time lower or equal to 11.19 sec. gives the maximal score (4 points).
 
-To obtain the final score, the summing of the three components is calculated, with a maximal total score of 12 points.
+To obtain the final score, the sum of the three components is calculated, with a maximal total score of 12 points.
 
 ### Body composition
 
@@ -113,34 +125,37 @@ Body mass (kg) and total body fat (%) were assessed by bioimpedance using the Ta
 
 ### Cardiac autonomic activity
 
-Cardiac autonomic activity was assessed using R-R interval recordings (HRV) obtained through the Polar Team2 system (Polar®) application. Artifacts and ectopic heartbeats, which did not exceed 3% of the recorded data, were excluded [@malik1996heart]. Time-domain parameters considered for analysis included the square root of the mean squared differences of successive R-R intervals (RMSSD, expressed in ms) as an index of parasympathetic activity [@pmid:20033207], and the standard deviation of RR intervals (SDNN), reflecting total variability encompassing both sympathetic and parasympathetic contributions to cardiac autonomic function [@pmid:9401419; @buchheit2006cardiac]. Additionally, the Stress Index (SI) and Parasympathetic and Sympathetic Nervous System Index (PNS and SNS, respectively) were computed. The PNS Index, indicative of total vagal stimulation, was derived from mean R-R intervals, RMSSD, and Poincaré Plot Index SD1 in normalized units (linked to RMSSD), representing deviations from normal population averages [@pmid:9401419; @GSID:XkAQwTGLgNsJ]. The SNS Index, reflecting total sympathetic stimulation, was derived from mean R-R intervals, Baevsky’s Stress Index (positively related to cardiovascular system stress and cardiac sympathetic activity), and the Poincaré Plot Index SD2 in normalized units (related to SDNN) with interpretation similar to the PNS Index [@pmid:9401419; @GSID:XkAQwTGLgNsJ]. The SI serves as an indicator representing the ANS control system's workload [@doi:10.1159/000513781], normalized by the square root of Baevsky’s SI [@2009MethodicalRU]. All analyses conducted to compute HRV related indices were performed using Kubios HRV® software (Kuopio, Finland).
+The cardiac autonomic activity was assessed using R-R interval recordings (HRV) obtained through the Polar Team2 system (Polar®) application. Artifacts and ectopic heartbeats were excluded, not exceeding 3% of the recorded data [@malik1996heart]. Time-domain parameters considered for analysis included the square root of the mean squared differences of successive R-R intervals (RMSSD, expressed in ms) as an index of parasympathetic activity [@pmid:20033207], and the standard deviation of RR intervals (SDNN), reflecting total variability encompassing both sympathetic and parasympathetic contributions to cardiac autonomic function [@pmid:9401419; @buchheit2006cardiac]. The Stress Index (SI) and Parasympathetic and Sympathetic Nervous System Index (PNS and SNS) were computed. The PNS Index, indicative of total vagal stimulation, was derived from mean R-R intervals, RMSSD, and Poincaré Plot Index SD1 in normalized units (linked to RMSSD), representing deviations from normal population averages [@pmid:9401419; @GSID:XkAQwTGLgNsJ]. The SNS Index, reflecting total sympathetic stimulation, was derived from mean R-R intervals, Baevsky’s Stress Index (positively related to cardiovascular system stress and cardiac sympathetic activity), and the Poincaré Plot Index SD2 in normalized units (related to SDNN) with interpretation similar to the PNS Index [@pmid:9401419; @GSID:XkAQwTGLgNsJ]. The SI indicates the ANS control system’s workload [@doi:10.1159/000513781], normalized by the square root of Baevsky’s SI [@2009MethodicalRU]. All analyses were conducted to compute HRV-related indices using Kubios HRV® software (Kuopio, Finland).
 
 ### Two-Minutes Step Test 
 
-The TMST is a sub-test from the Senior Fitness Test, demanding a low to moderate intensity [@Rikli1999; @ijerph20054456]. The test consists of a two-minute assessment designed to evaluate cardiorespiratory fitness. Participants are instructed to raise their right knee to a marked point on a wall as many times as possible within the given time frame, ensuring that each raise reaches at least a 70° angle at the thigh-femoral joint. The number of valid steps were recorded for each subject.
+The TMST is a sub-test from the Senior Fitness Test, demanding a low to moderate intensity [@Rikli1999; @ijerph20054456]. It consists of a two-minute assessment designed to evaluate cardiorespiratory fitness. Participants are instructed to raise their right knee to a marked point on a wall as often as possible within the given time frame, ensuring that each raise reaches at least a 70° angle at the thigh-femoral joint. The number of valid steps was recorded for each subject.
 
 ### Geriatric Depression Scale
 
-The 30-questions Geriatric Depression Scale (GDS-30) was employed to assess subject's depressive symptoms [@pmid:27633329]. It consists of a 30 dichotomous questionnaire, where participants are asked about their past-week feelings in reference to depressive symptoms (for instance, "Do you feel that your life is empty?"), with higher scores (i. e., "yes" responses) representing more depressive symptoms. It was first developed by Yesavage and colleagues [@pmid:7183759] and is currently widely used [@pmid:34922595]. The spanish version, employed in this study, has been previously validated, with a Cronbach alpha coefficient of 0.82 [@pmid:11921157].
+The 30-question Geriatric Depression Scale (GDS-30) was employed to assess the subject’s depressive symptoms [@pmid:27633329]. It consists of a dichotomous questionnaire, where participants are asked about their past-week feelings about depressive symptoms (for instance, “Do you feel that your life is empty?”), with higher scores (i.e., “yes” responses) representing more depressive symptoms. It was first developed by Yesavage and colleagues [@pmid:7183759] and is currently widely used [@pmid:34922595]. The Spanish version employed in this study has been previously validated, with a Cronbach alpha coefficient of 0.82 [@pmid:11921157]. The authors have permission to use this instrument from the copyright holders.
 
 
 ### Beck Anxiety Inventory
 
-The Beck anxiety Inventory was employed to assess anxiety symptoms. It consists of a 21-items questionnaire based on usual anxiety symptoms and a 4-options Likert scale from 0 ("Not at all") to 3 ("Severely"), meaning the severity reported by the subject in each one. It was originally developed by Beck and colleagues [@pmid:3204199]. In this study, the spanish version is used, which has demonstrated a high internal consistency in older people (α = 0.94) [@RODRIGUEZREYNALDO2001353].
+The Beck Anxiety Inventory was employed to assess anxiety symptoms. It consists of a 21-item questionnaire based on usual anxiety symptoms and a 4-option Likert scale from 0 (“Not at all”) to 3 (“Severely”), meaning the severity reported by the subject in each one. It was originally developed by Beck and colleagues [@pmid:3204199]. This study uses the Spanish version, demonstrating a high internal consistency in older people (α = 0.94) [@RODRIGUEZREYNALDO2001353]. The authors have permission to use this instrument from the copyright holders.
+
 
 ## Statistical analysis
 
-We used mean and standard deviation (SD) to describe continuous variables, absolute and relative frequencies to describe discrete variables. In order to assess the relationship between variables, we used Pearson's product-moment correlation (r), and to assess differences between groups we used standardized mean difference (SMD) and 95% confidence intervals (CI~95%~).
+We used mean and standard deviation (SD) to describe continuous variables and absolute and relative frequencies to describe discrete variables. We used Pearson’s product-moment correlation (r) to assess the relationship between variables. To assess differences between groups, we used standardized mean difference (SMD) and 95% confidence intervals (CI!95%!).
 
-As a way of controlling for the influence of psycho-physiological variables on the cardiac autonomic response of the subjects to exercise, we assess the average causal mediation effect (ACME), the average direct effect (ADE) of the main effects after taking into account the effect of moderator variables into the observed relationships and the proportion of the effect that its mediated by these variables [@kosuke2010identification]. To assess the significance of moderating variables, we used non overlapping CI~95%~, estimated based on non parametric bootstrapping by using Monte Carlo resampling, and bias-corrected and accelerated CI~95%~, using the *mediation* R package to this end [@tingley2014mediation].
+As a way of controlling for the influence of psycho-physiological variables on the cardiac autonomic response of the subjects to exercise, we assess the average causal mediation effect (ACME), the average direct effect (ADE) of the main effects after taking into account the effect of moderator variables into the observed relationships and the proportion of the effect that its mediated by these variables [@kosuke2010identification]. TTo assess the significance of moderating variables, we used nonoverlapping CI95%, estimated based on nonparametric bootstrapping using Monte Carlo resampling, and bias-corrected. We accelerated CI95%, using the *mediation* R package to this end [@tingley2014mediation].
 
-We defined a type I error rate at 5% ($\alpha$ = 0.05) as our threshold for null hypothesis significance testing, and non-overlapping CI~95%~ over the null effect for sex differences and mediation analyses. All analyses were computed using the *R* programming language for statistical computing, [@rlanguage].
+We defined a type I error rate of 5% (α = 0.05) as our threshold for null hypothesis significance testing and nonoverlapping CI95% over the null effect for sex differences and mediation analyses. To estimate the confidence in our conclusions and, consequently, the statistical power of our analyses, we calculated the probability of correctly rejecting the null hypothesis for the correlation tests post hoc, considering a low (i.e., r = 0.3) to moderate effect size (r = 0.5)
+
+All analyses were computed using the R programming language for statistical computing [@rlanguage].
 
 # Results
 
 ## Sample characteristics
 
-The sample assessed consisted on 81 adults (age: 71.1 ± 6.2 years old, BMI: 31 ± 6.2 kg/m^2^), of whom 67 (82.7%) were females. Sociodemographic and anthropometric characteristics of the sample can be seen in table 1.
+The sample consisted of 81 adults (71.1 ± 6.2 years old, BMI: 31 ± 6.2 kg/m^2^) and 67 (82.7%) females. Table 1 shows the characteristics of the sample.
 
 ```{r prep-env}
 #| include: false
@@ -155,17 +170,17 @@ dat <- mindfulness[id_event_name == "Basal", -2L]
 
 
 ```{r}
+#| eval: false
 #| echo: false
 #| message: false
 #| warning: false
 readRDS(file = "tables/tbl-descriptives.RDS") |> 
   font(part = "all", fontname = "Times")
 ```
-**Table 1**. Main sample characteristics. Body composition and sociodemograpic variables are displayed for the overall sample and aggregated by sex. Differences between males and females are displayed as SMD and CI~95%~ for continuous variables.
 
 ## Body composition and autonomic response
 
-We observed that body fat percentage was linked to a lower SNS (r = -0.252, p = 0.030) and Stress index (r = -0.258, p = 0.027) response during the TSMT. In addition, body fat percentage was positively correlated with time domain HRV during exercise, more specifically RMSSD (r = 0.253, p = 0.029) and SDNN (r = 0.269, p = 0.020). No other body composition variables were found to influence the cardiac autonomic response to exercise.
+We observed that body fat percentage was linked to a lower SNS (r = -0.252, p = 0.030) and Stress index (r = -0.258, p = 0.027) response during the TSMT. In addition, body fat percentage was positively correlated with time domain HRV during exercise, specifically RMSSD (r = 0.253, p = 0.029) and SDNN (r = 0.269, p = 0.020) (See Figure 2). No other body composition variables correlate with the cardiac autonomic response to exercise. 
 
 ```{r}
 #| echo: false
@@ -233,7 +248,7 @@ dat_long[, variable := factor(variable, levels = c("TMST steps", "SPPB total sco
 
 fig2a <- ggplot(dat_long, aes(value, cc_grasa_total_porcentaje)) +
   facet_grid(~ variable, scales = "free_x") +
-  geom_point(aes(col = sd_sexo)) +
+  geom_point() +
   geom_smooth(method = "lm") +
   geom_text(mapping = aes(label = text), data = data.frame(
     variable = as.factor(c("TMST steps", "SPPB total score")),
@@ -296,7 +311,7 @@ dat_long[, variable := factor(variable, levels = c("RMSSD", "SDNN", "PNS index",
 
 fig3a <- ggplot(dat_long, aes(value, tm_pasos)) +
   facet_grid(~ variable, scales = "free_x") +
-  geom_point(aes(col = sd_sexo)) +
+  geom_point() +
   geom_smooth(method = "lm") +
   geom_text(mapping = aes(label = text), data = data.frame(
     variable = as.factor(c("RMSSD", "SDNN", "PNS index", "SNS index", "Stress index")),
@@ -312,7 +327,7 @@ fig3a <- ggplot(dat_long, aes(value, tm_pasos)) +
 
 fig3b <- ggplot(dat_long, aes(value, sppb_total)) +
   facet_grid(~ variable, scales = "free_x") +
-  geom_point(aes(col = sd_sexo)) +
+  geom_point() +
   geom_smooth(method = "lm") +
   geom_text(mapping = aes(label = text), data = data.frame(
     variable = as.factor(c("RMSSD", "SDNN", "PNS index", "SNS index", "Stress index")),
